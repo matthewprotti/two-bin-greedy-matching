@@ -55,6 +55,3 @@ python3 paper/build_pdf.py --out-dir /tmp/two-bin-paper-new
 
 Use a new directory outside the repository. The script supports pdfLaTeX or Tectonic. The mathematical statements and display blocks are unchanged from the supplied manuscript; the verification and AI-attribution paragraphs reflect the checked supporting library.
 
-## Registry status
-
-No VibeMathed submission or outreach was sent by the preparation workflow. The exact classification question arose within this project, motivated by Arnosti's model; it must not be presented as his original equal-capacity conjecture. VibeMathed's prior-question eligibility rule requires editorial assessment. This does not change the mathematical statement.
