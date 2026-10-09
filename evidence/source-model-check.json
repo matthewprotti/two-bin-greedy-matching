@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "finite execution, not universal formal bridge",
+  "capacities": "1 <= a <= 3; 1 <= b <= 4 (including label swaps)",
+  "degrees": [
+    0,
+    1,
+    2
+  ],
+  "word_lengths": "0..4",
+  "degree_words_per_capacity": 121,
+  "fixed_tail_comparisons": 16032,
+  "uniform_arrival_tail_comparisons": 16032,
+  "thresholds": "0..word_length+1",
+  "lean_driver_sha256": "e339dc942a3f8a0615dae59eabe28b09b58b9f9f6bacf13a8b451794167db9bc",
+  "oracle_sha256": "6ad0545816a6310121ffd0cf30302126548f55c477230d1b878b097c514f6b56",
+  "source_model_sha256": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961",
+  "raw_output_sha256": "071b9d09de7e3d1257a80038015f800b24d50d70cafcc765cbde344927062e01"
+}

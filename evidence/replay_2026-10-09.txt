@@ -1,0 +1,9 @@
+Manifest membership, sizes and SHA-256: PASS (14 files)
+parent_integrity: PASS (0.00s)
+algebra: PASS (0.00s)
+coefficients: PASS (2.29s)
+prefixes: PASS (18.38s)
+direct_process: PASS (6.02s)
+witnesses: PASS (1.48s)
+SEALED EVIDENCE MATCHES EXACTLY
+FRESH-COPY REPLAY PASS; original and copied package bytes unchanged

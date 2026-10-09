@@ -1,0 +1,14 @@
+{
+  "schema": "two-bin-manuscript-qa.v1",
+  "date": "2026-10-09",
+  "pages": 10,
+  "source_display_blocks_exactly_preserved": 45,
+  "numbered_equations": 24,
+  "original_classification_zip_sha256": "97b6885c2f40a71101b58e2245d18f96335875306c3df8447754e52e5f0618d3",
+  "pdf_sha256": "21085997e902ae0eeb2fc7a75d8eda7194f71aa82e499fd04016f22c8509c12b",
+  "renderer": "PDF skill render_pdf.py, 100 DPI; full-document contact sheet and individual page inspection",
+  "layout": "Regime table kept on one page; no observed clipping, broken glyphs, or formula overflow",
+  "latex_overfull_or_unresolved_reference_warnings": 0,
+  "notation_changes": "Inline plain-text symbols rendered as mathematical subscripts, sets, tau and sums; original display formulas unchanged",
+  "limitation": "Presentation fidelity and computational replay are not a new independent proof or novelty audit"
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "method": "Public web search; relevant primary sources followed; targeted public GitHub GETs used to pin source revision",
+  "queries": [
+    "\"Greedy Matching\" \"2021.0082\"",
+    "\"greedy matching\" \"two bins\"",
+    "\"greedy-matching-capacity\"",
+    "\"RANKING\" \"(b-a)\" capacity",
+    "\"RANDOM-VERTEX\" \"RANKING\" \"unequal\"",
+    "\"greedy matching\" \"two\" \"classification\"",
+    "\"falling factorial\" \"(q-r)\"",
+    "\"falling factorial\" \"paired\" inequality",
+    "\"two-bin\" \"stochastic\" matching",
+    "\"RANDOM-VERTEX\" \"heterogeneous\"",
+    "\"falling factorial\" \"negative dependence\"",
+    "\"exchangeable\" \"two levels\" \"negative\" correlation",
+    "\"RANDOM-VERTEX\" \"RANKING\" \"capacities\" -site:researchgate.net -site:experts.umn.edu",
+    "\"binomial\" \"(q-r)^2\" inequality",
+    "\"falling factorial\" \"symmetric\" inequality",
+    "\"exchangeable\" \"negative dependence\" \"rank sequence\"",
+    "site:arxiv.org \"RANDOM-VERTEX\" \"RANKING\"",
+    "site:mathoverflow.net \"matching\" \"Arnosti\"",
+    "site:github.com \"greedy matching\" \"two-bin\"",
+    "\"symmetric\" \"falling factorials\" inequality"
+  ],
+  "result": "No exact classification match located; not exhaustive",
+  "authors_contacted": false
+}

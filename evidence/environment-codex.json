@@ -1,0 +1,12 @@
+{
+  "platform": "macOS 26.4.1 arm64",
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "toolchain_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-darwin_aarch64.tar.zst",
+  "toolchain_archive_sha256": "94d4246fd90a152a4819419498d3e45c941a31638a57a0a8e32561494ab6cea7",
+  "checksum_provenance": "Locally computed after download from official GitHub release; not a separately published upstream checksum",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "source_package_sha256": "442256243e412e6c49dc938b20cc8cd16dea86680cd84ae8e02e3503bfd3a489",
+  "original_manuscript_sha256": "21085997e902ae0eeb2fc7a75d8eda7194f71aa82e499fd04016f22c8509c12b",
+  "cache_download_workaround": "Pinned Mathlib Cache/Main.lean executed via lake env lean --run; compiled downloader failed macOS Mach-O SG_READ_ONLY check; proof checker unchanged"
+}

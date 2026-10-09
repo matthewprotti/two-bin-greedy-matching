@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying unrefereed manuscript and identify the Git revision used."
+type: software
+title: "A sharp capacity criterion for stochastic dominance in two-bin greedy matching"
+authors:
+  - family-names: Protti
+    given-names: Matthew
+    affiliation: Independent Researcher
+version: 0.1.0
+abstract: "A sharp two-bin capacity classification, with a self-contained paper proof and exact reproducibility artifacts. A partial supporting Lean library compiles; the full classification is not formally proved."
+keywords:
+  - greedy matching
+  - stochastic dominance
+  - random bipartite graphs
+  - heterogeneous capacities
+repository-code: "https://github.com/matthewprotti/two-bin-greedy-matching"

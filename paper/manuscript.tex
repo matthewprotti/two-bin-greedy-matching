@@ -1,0 +1,27 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,calc}
+\usepackage{microtype,needspace}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A sharp capacity criterion for stochastic dominance in two-bin greedy matching},pdfauthor={Matthew Protti},pdfsubject={Unrefereed mathematical manuscript; paper proof, not Lean-verified},pdfkeywords={greedy matching, stochastic dominance, heterogeneous capacities}}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\setlength{\emergencystretch}{2em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Two-bin greedy matching}\fancyhead[R]{\small M. Protti}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\title{A sharp capacity criterion for stochastic dominance\\in two-bin greedy matching}
+\author{Matthew Protti\\\small Independent Researcher}
+\date{9 October 2026\\\small Unrefereed manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Consider two bins with positive integer capacities $a\le b$ and jobs with prescribed degrees in $\{0,1,2\}$. Singleton neighborhoods are independent and uniform. RANDOM-VERTEX uses fresh uniform choices among available neighbors, whereas RANKING uses one independently uniform shared bin priority. We prove that RANDOM-VERTEX stochastically dominates RANKING for every finite prescribed degree word if and only if $(b-a)^2\le a+b-2$. The same necessary-and-sufficient condition holds when arrivals are uniformly randomized and the comparison is required for every degree multiset. A paired falling-factorial inequality proves sufficiency; each excluded capacity pair admits a strict reversal with only two flexible jobs, both in an explicit fixed order and under uniform random arrivals. We also classify universal equality, reverse dominance, and mutual non-dominance. The argument is elementary and self-contained.
+\end{abstract}
+\noindent\textbf{Keywords:} greedy matching; stochastic dominance; random bipartite graphs; heterogeneous capacities; falling factorials.
+\input{body.tex}
+\end{document}

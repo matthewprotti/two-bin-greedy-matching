@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "paper_proof": "COMPLETE",
+  "returned_review": "POSITIVE_PROVIDER_UNIDENTIFIED",
+  "exact_historical_replay": "PASS_THIS_SESSION",
+  "full_Lean_formalization": "NOT_COMPLETE",
+  "novelty": "BOUNDED_SEARCH_NO_MATCH_FOUND_NOT_CLEARED",
+  "specialist_contact": "DRAFTED_NOT_SENT",
+  "github_publication": "PUBLIC_RESEARCH_REPOSITORY; see Git history for exact revisions",
+  "vibemathed": "DRAFT_ONLY_NOT_SUBMITTED; registry fit disclosed for curator assessment",
+  "three_bin_claim": "NONE",
+  "author": "Matthew Protti",
+  "affiliation": "Independent Researcher",
+  "history_archive_sha256": "97b6885c2f40a71101b58e2245d18f96335875306c3df8447754e52e5f0618d3",
+  "Lean_supporting_library": "COMPILED_27_NAMED_THEOREMS_AXIOMS_AUDITED"
+}

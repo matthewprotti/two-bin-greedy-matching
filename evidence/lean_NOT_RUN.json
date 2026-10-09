@@ -1,0 +1,22 @@
+{
+  "schema": "two-bin-lean-build.v1",
+  "source_sha256": {
+    "AxiomAudit.lean": "b0e4eb09ae398dd574cea8116214c965d1bf2d73e57807a52ee174a0cdccecea",
+    "TwoBin/Definitions.lean": "68487e7f217252a310dfea189b6525b5be148f4265e7aa79f2b5d2ced12f8d5e",
+    "TwoBin/Falling.lean": "ec0937a3076934b406922518fdbe7b8c06353b03de8efca9bf31017a0eb6abea",
+    "TwoBin/FiniteKernel.lean": "b3d0d138dbc08ab4c6c97750be9a6bfc0e20f1dfbed8899bb7c61ced205d5f0d",
+    "TwoBin/Secant.lean": "cd2a9dcc867adcdd85d21fdccb6a168714565f32e525d816eb5ba84237986131",
+    "TwoBin/SourceModel.lean": "c03008ca56a7063ba59e54a408fdaa449463dfa62e1c3cbde0ced12f8703af32",
+    "TwoBin/Witness.lean": "9be47f7f9c48355001dc3aacd81045d89076831f92c102b5fb01f319c3798313",
+    "TwoBin.lean": "f20ec6341a125a1a2aafe387caeaa508599039b64e8536343c38b165b42ae319",
+    "negative/FalseNumeric.lean": "7bea151e0bfa4c3d5529b871ac6f9e6956458be6c9a0df4471019f5b5fb467f4",
+    "negative/FalseQuadratic.lean": "3e562ec0b8f69fb4d6b77b8ddda527ba7b5de929c1405ea7cab83ef3aca2ccd7",
+    "negative/FalseRankingNumerator.lean": "f8be6ae78f3cc07f26b5af662570e5856b1cb73fce11f1f99f08075347edbf2f"
+  },
+  "full_classification": "NOT_PROVED_IN_LEAN",
+  "paired_sufficiency": "NOT_PROVED_IN_LEAN",
+  "source_statement_independent_audit": "NOT_RUN",
+  "steps": [],
+  "status": "NOT_RUN",
+  "reason": "lake/Lean toolchain not installed"
+}
