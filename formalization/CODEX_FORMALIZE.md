@@ -1,4 +1,4 @@
-> Historical development handoff from before compilation. Phase A is now complete; see README.md and SCOPE.md for the current checked scope. The remaining phases are open.
+> Historical development handoff. Phases A and B are complete. The binomial/window part of C and structural source-model parts of C-E are proved; the full probability and continuation bridges remain open. See README.md and SCOPE.md.
 
 # Codex task: compile, complete, and audit the two-bin formalization
 

@@ -11,9 +11,13 @@
   "degree_words_per_capacity": 121,
   "fixed_tail_comparisons": 16032,
   "uniform_arrival_tail_comparisons": 16032,
+  "survival_comparisons_actual_lean_vs_historical_formula_and_lean_formula": 2904,
   "thresholds": "0..word_length+1",
-  "lean_driver_sha256": "e339dc942a3f8a0615dae59eabe28b09b58b9f9f6bacf13a8b451794167db9bc",
+  "lean_driver_sha256": "c3973bb280bbaf9c95625cc3ca2266cc0a4543ecd04b2d35b08ea936ac73f2fd",
   "oracle_sha256": "6ad0545816a6310121ffd0cf30302126548f55c477230d1b878b097c514f6b56",
+  "historical_formula_model_sha256": "63a23345b32e862ce2af53708deffd9f2f7c424798f7fa4b225126e1ea12a1f3",
+  "source_bridge_sha256": "56150a43ee10356801710b0c2ecc4c63ee294055f5a24bb9d2da08040d4b5e68",
+  "window_formula_sha256": "76a3a4a2584b431455c79989aacc9614ab5852ceba141bcf0774f8b7c371ccc5",
   "source_model_sha256": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961",
-  "raw_output_sha256": "071b9d09de7e3d1257a80038015f800b24d50d70cafcc765cbde344927062e01"
+  "raw_output_sha256": "40de44b98c9afdf93ddd02e044d371dbfce97e95ee6bb26c57d8e8595c0ccfbd"
 }

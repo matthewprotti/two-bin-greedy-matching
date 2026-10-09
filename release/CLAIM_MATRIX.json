@@ -12,5 +12,8 @@
   "author": "Matthew Protti",
   "affiliation": "Independent Researcher",
   "history_archive_sha256": "97b6885c2f40a71101b58e2245d18f96335875306c3df8447754e52e5f0618d3",
-  "Lean_supporting_library": "COMPILED_27_NAMED_THEOREMS_AXIOMS_AUDITED"
+  "Lean_supporting_library": "83_NAMED_THEOREMS_COMPILED_AXIOMS_AUDITED",
+  "Lean_paired_factorial_classification": "PROVED_UNDER_ORIGINAL_DEFINITIONS",
+  "Lean_binomial_corollary": "PROVED_INCLUDING_ZERO_SUPPORT",
+  "Lean_survival_formula_comparison": "PROVED; SOURCE_DISTRIBUTION_BRIDGE_STILL_OPEN"
 }

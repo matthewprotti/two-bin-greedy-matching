@@ -1,0 +1,322 @@
+{
+  "schema": "two-bin-lean-build.v2",
+  "source_sha256": {
+    "AxiomAudit.lean": "ef6803d30a36abffba9f99fa7b845b1a24c46c844c8635ceeb6669af8e41be07",
+    "PositiveControls.lean": "93e19c82d043f90af78e20ce2d65dfd3715376fb9759a199b9f01c78a13dd3a0",
+    "TwoBin/Definitions.lean": "162aca3f6f95c0b6a7ed9865af9c0d2a864b18c067161c70afc065167a2cdcb8",
+    "TwoBin/Falling.lean": "33f0d0291bb32cd5ed052b55c41a4f72b6541ed2f4de83d8011a00e5acf06a70",
+    "TwoBin/FiniteKernel.lean": "bd8060596fe623d9d215f0c48adac35bee208611bcad69bdcb6585ba5b1fa112",
+    "TwoBin/Secant.lean": "33a584f399864da677db38e7032a4aca485e3e078b782c92a66e79f9a09393b4",
+    "TwoBin/SourceModel.lean": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961",
+    "TwoBin/Witness.lean": "7306015d07cbabe116e68b154f4682d8050cc9cda67317d97dd66cf7ad94b947",
+    "TwoBin.lean": "f20ec6341a125a1a2aafe387caeaa508599039b64e8536343c38b165b42ae319",
+    "build_and_audit.py": "5bec24f26080587049fd3ce36a28623f23aa7bb927a2859f4101e2552a02386e",
+    "lake-manifest.json": "952c0b5891220c95bdf1716a9ff2517fde70ad9014cf0c205e042d127b9dde47",
+    "lakefile.toml": "0ae59e330094c4afa161460cd92f50381834bbd39131210e4926b991b3cc1b88",
+    "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "negative/FalseNumeric.lean": "7bea151e0bfa4c3d5529b871ac6f9e6956458be6c9a0df4471019f5b5fb467f4",
+    "negative/FalseQuadratic.lean": "3e562ec0b8f69fb4d6b77b8ddda527ba7b5de929c1405ea7cab83ef3aca2ccd7",
+    "negative/FalseRankingNumerator.lean": "f8be6ae78f3cc07f26b5af662570e5856b1cb73fce11f1f99f08075347edbf2f"
+  },
+  "full_classification": "NOT_PROVED_IN_LEAN",
+  "paired_sufficiency": "NOT_PROVED_IN_LEAN",
+  "source_statement_independent_audit": "NOT_RUN",
+  "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "steps": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "returncode": 0,
+      "output": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)\n",
+      "seconds": 2.051
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "output": "\u2714 [839/846] Built TwoBin.Definitions\n\u2714 [840/846] Built TwoBin.FiniteKernel\n\u2714 [841/846] Built TwoBin.SourceModel\n\u2714 [842/846] Built TwoBin.Witness\n\u2714 [843/846] Built TwoBin.Falling\n\u2714 [844/846] Built TwoBin.Secant\n\u2714 [845/846] Built TwoBin\nBuild completed successfully.\n",
+      "seconds": 9.065
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Definitions.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.256
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Falling.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.271
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Secant.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.963
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Witness.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.095
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/FiniteKernel.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.753
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/SourceModel.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.815
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "output": "'TwoBin.falling_zero' does not depend on any axioms\n'TwoBin.falling_one' depends on axioms: [propext]\n'TwoBin.falling_two' depends on axioms: [propext]\n'TwoBin.falling_add' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_zero_of_lt' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_nat_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_nat_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_axis' depends on axioms: [propext]\n'TwoBin.paired_implies_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.gap_form' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_identity' depends on axioms: [propext, Quot.sound]\n'TwoBin.adjacent_nat_product_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailExpansion_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tail_comparison_from_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.clipped_continuation_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.mixture_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.oddSlope_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.combine_product_secant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.reversal_rv_count' does not depend on any axioms\n'TwoBin.reversal_rk_count' does not depend on any axioms\n'TwoBin.adjacent_rv_count' does not depend on any axioms\n'TwoBin.adjacent_rk_count' does not depend on any axioms\n'TwoBin.witness_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_polynomial_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_witness_expression_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "seconds": 2.373
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "PositiveControls.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.822
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseNumeric.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseNumeric.lean:3:76: error: tactic 'decide' proved that the proposition\n  TwoBin.rvCount 1 3 [TwoBin.Degree.flexible, TwoBin.Degree.flexible, TwoBin.Degree.singleton] 3 = 6\nis false\n",
+      "seconds": 1.714
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseQuadratic.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseQuadratic.lean:3:39: error: unsolved goals\n\u22a2 False\n",
+      "seconds": 1.689
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseRankingNumerator.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseRankingNumerator.lean:3:77: error: tactic 'decide' proved that the proposition\n  TwoBin.rkCount 1 3 [TwoBin.Degree.flexible, TwoBin.Degree.flexible, TwoBin.Degree.singleton] 3 = 10\nis false\n",
+      "seconds": 1.691
+    }
+  ],
+  "audited_theorems": [
+    "TwoBin.falling_zero",
+    "TwoBin.falling_one",
+    "TwoBin.falling_two",
+    "TwoBin.falling_add",
+    "TwoBin.falling_zero_of_lt",
+    "TwoBin.falling_nat_nonnegative",
+    "TwoBin.falling_nat_monotone",
+    "TwoBin.paired_axis",
+    "TwoBin.paired_implies_quadratic",
+    "TwoBin.gap_form",
+    "TwoBin.product_step_identity",
+    "TwoBin.adjacent_nat_product_nonnegative",
+    "TwoBin.product_step_nonnegative",
+    "TwoBin.tailExpansion_nonnegative",
+    "TwoBin.tail_comparison_from_identity",
+    "TwoBin.clipped_continuation_step",
+    "TwoBin.mixture_le",
+    "TwoBin.oddSlope_monotone",
+    "TwoBin.combine_product_secant",
+    "TwoBin.reversal_rv_count",
+    "TwoBin.reversal_rk_count",
+    "TwoBin.adjacent_rv_count",
+    "TwoBin.adjacent_rk_count",
+    "TwoBin.witness_factorization",
+    "TwoBin.witness_polynomial_negative",
+    "TwoBin.witness_denominator_positive",
+    "TwoBin.random_witness_expression_negative"
+  ],
+  "axioms": {
+    "TwoBin.falling_zero": [],
+    "TwoBin.falling_one": [
+      "propext"
+    ],
+    "TwoBin.falling_two": [
+      "propext"
+    ],
+    "TwoBin.falling_add": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.falling_zero_of_lt": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.falling_nat_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.falling_nat_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.paired_axis": [
+      "propext"
+    ],
+    "TwoBin.paired_implies_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.gap_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.product_step_identity": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.adjacent_nat_product_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.product_step_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailExpansion_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tail_comparison_from_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.clipped_continuation_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.mixture_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.oddSlope_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.combine_product_secant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.reversal_rv_count": [],
+    "TwoBin.reversal_rk_count": [],
+    "TwoBin.adjacent_rv_count": [],
+    "TwoBin.adjacent_rk_count": [],
+    "TwoBin.witness_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.witness_polynomial_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.witness_denominator_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_witness_expression_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "negative_controls": {
+    "FalseNumeric": "REJECTED_AT_FALSE_CLAIM",
+    "FalseQuadratic": "REJECTED_AT_FALSE_CLAIM",
+    "FalseRankingNumerator": "REJECTED_AT_FALSE_CLAIM"
+  },
+  "status": "PARTIAL_LEMMAS_COMPILED_AND_AXIOMS_AUDITED"
+}

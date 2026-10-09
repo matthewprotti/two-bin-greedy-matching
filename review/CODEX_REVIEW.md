@@ -1,3 +1,5 @@
+> Initial publication review, before the algebraic milestone. The paired-factorial criterion and binomial comparison have since been formalized; see [ALGEBRAIC_MILESTONE.md](ALGEBRAIC_MILESTONE.md).
+
 # Review findings — 9 October 2026
 
 The paper's argument appears internally sound on this review. No counterexample or mathematical error was found. This is an AI-assisted audit, not an independent human specialist endorsement or a novelty clearance.

@@ -30,6 +30,13 @@ def main : IO Unit := do
       for n in [0:5] do
         for code in [0:3^n] do
           let word := decodeWord n code
+          let positive := (word.filter (fun d => decide (d ≠ .zero))).length
+          let singles := (word.filter (fun d => decide (d = .singleton))).length
+          let svrv := TwoBin.sourceSurvivalCount a b false false word
+          let svrk := TwoBin.sourceSurvivalCount a b true false word + TwoBin.sourceSurvivalCount a b true true word
+          let vformula := TwoBin.rvSurvivalFormula (a-1) (b-1) positive
+          let rformula := TwoBin.rankingSurvivalFormula (a-1) (b-1) positive singles
+          IO.println s!"S,{a},{b},{n},{code},{svrv},{svrk},{vformula.num},{vformula.den},{rformula.num},{rformula.den}"
           for k in [0:n+2] do
             let rv := TwoBin.rvCount a b word k
             let rk := TwoBin.rkCount a b word k
@@ -53,18 +60,37 @@ def main():
         temp = Path(temp)
         with zipfile.ZipFile(archive) as z:
             oracle_bytes = z.read('two_bin_classification/oracle.py')
+            model_bytes = z.read('two_bin_classification/model.py')
         oracle_path = temp/'oracle.py'
         oracle_path.write_bytes(oracle_bytes)
         spec = importlib.util.spec_from_file_location('two_bin_literal_oracle', oracle_path)
         oracle = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(oracle)
+        model_path = temp/'model.py'
+        model_path.write_bytes(model_bytes)
+        model_spec = importlib.util.spec_from_file_location('two_bin_historical_formula', model_path)
+        model = importlib.util.module_from_spec(model_spec)
+        model_spec.loader.exec_module(model)
         driver = temp/'SourceCheck.lean'
         driver.write_text(DRIVER)
         result = subprocess.run(['lake', 'env', 'lean', '--run', str(driver)], cwd=ROOT/'formalization', text=True, capture_output=True)
         if result.returncode:
             raise RuntimeError(result.stdout+result.stderr)
-        cache, fixed, uniform = {}, 0, 0
+        cache, fixed, uniform, survival_checks = {}, 0, 0, 0
         for row in result.stdout.splitlines():
+            if row.startswith('S,'):
+                a,b,n,code,svrv,svrk,vnum,vden,rnum,rden = map(int,row.split(',')[1:])
+                digits, c = [], code
+                for _ in range(n):
+                    digits.append(c%3);c//=3
+                positive = sum(d!=0 for d in digits)
+                singles = digits.count(1)
+                expected_rv = model.survival((a,b),positive,singles,'rv')
+                expected_rk = model.survival((a,b),positive,singles,'ranking')
+                assert Fraction(svrv,2**n)==expected_rv==Fraction(vnum,vden), row
+                assert Fraction(svrk,2**(n+1))==expected_rk==Fraction(rnum,rden), row
+                survival_checks += 2
+                continue
             a,b,n,code,k,rv,rk,order_count,urv,urk = map(int,row.split(','))
             degrees=[]
             c=code
@@ -89,12 +115,17 @@ def main():
                 uniform+=1
         expected_rows=12*sum((3**n)*(n+2) for n in range(5))
         assert fixed==uniform==2*expected_rows
+        assert survival_checks==2*12*sum(3**n for n in range(5))
         receipt={'status':'PASS','scope':'finite execution, not universal formal bridge',
                  'capacities':'1 <= a <= 3; 1 <= b <= 4 (including label swaps)',
                  'degrees':[0,1,2],'word_lengths':'0..4','degree_words_per_capacity':121,
                  'fixed_tail_comparisons':fixed,'uniform_arrival_tail_comparisons':uniform,
+                 'survival_comparisons_actual_lean_vs_historical_formula_and_lean_formula':survival_checks,
                  'thresholds':'0..word_length+1','lean_driver_sha256':hashlib.sha256(DRIVER.encode()).hexdigest(),
                  'oracle_sha256':hashlib.sha256(oracle_bytes).hexdigest(),
+                 'historical_formula_model_sha256':hashlib.sha256(model_bytes).hexdigest(),
+                 'source_bridge_sha256':hashlib.sha256((ROOT/'formalization/TwoBin/SourceBridge.lean').read_bytes()).hexdigest(),
+                 'window_formula_sha256':hashlib.sha256((ROOT/'formalization/TwoBin/Window.lean').read_bytes()).hexdigest(),
                  'source_model_sha256':hashlib.sha256((ROOT/'formalization/TwoBin/SourceModel.lean').read_bytes()).hexdigest(),
                  'raw_output_sha256':hashlib.sha256(result.stdout.encode()).hexdigest()}
         out.parent.mkdir(parents=True,exist_ok=True)

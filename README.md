@@ -13,8 +13,8 @@ The paper establishes this classification for every fixed degree word and, separ
 ## Status and reading order
 
 1. [Manuscript (PDF)](paper/manuscript.pdf): complete elementary paper proof. [LaTeX source](paper/manuscript.tex) and [readable proof](paper/manuscript.md) are included.
-2. [Review and findings](review/CODEX_REVIEW.md): what was checked and what remains uncertain. A positive returned review has unidentified provider provenance; no independent human expert review or peer review is claimed.
-3. [Lean scope](formalization/README.md): **27 supporting theorems compile and have audited axioms. Neither the full paired-factorial criterion nor the matching classification is proved in Lean.** The target definitions are explicitly unproved propositions.
+2. [Algebraic milestone](review/ALGEBRAIC_MILESTONE.md) and [initial review](review/CODEX_REVIEW.md): what was checked and what remains uncertain. A positive returned review has unidentified provider provenance; no independent human expert review or peer review is claimed.
+3. [Lean scope](formalization/README.md): **The complete paired-factorial criterion, binomial corollary, and survival-formula comparison are proved in Lean.** All 83 named theorems have audited axioms. The full matching classification is still unproved: source-probability and continuation bridges remain open.
 4. [Prior-work report](research/OVERLAP_REPORT.md): a bounded search found no matching classification. Novelty and priority remain uncleared. Arnosti already observed unequal-capacity reversals; the claimed contribution is the sharp classification.
 5. [Claim matrix](release/CLAIM_MATRIX.json) and [scope matrix](formalization/SCOPE.md).
 
@@ -30,22 +30,22 @@ python3 -B VERIFY_PACKAGE.py
 
 This verifies the publication manifest, checks the pinned historical archive, and reruns its full exact-arithmetic suite in a fresh temporary copy. It excludes generated Git, Lean, and Python cache directories. The immutable October 8 archive and its historical status labels remain unchanged.
 
-## Reproduce the partial Lean build
+## Reproduce the algebraic criterion and partial process bridges
 
 Install Lean through the official Lean toolchain distribution, then use the checked-in toolchain and dependency manifest:
 
 ```sh
 cd formalization
 MATHLIB_NO_CACHE_ON_UPDATE=1 lake update
-lake exe cache get TwoBin/Definitions.lean
+lake exe cache get TwoBin.lean
 python3 -B build_and_audit.py --receipt /tmp/two-bin-lean-audit.json
 cd ..
 python3 -B scripts/check_source_model.py --receipt /tmp/two-bin-source-model.json
 ```
 
-Receipt destinations must be new paths outside the repository. See [the Lean README](formalization/README.md) for the macOS cache-downloader workaround and exact scope. The source-model comparison executes actual Lean definitions and compares them with the separate historical Python oracle. These finite tests do not prove the universal probability bridges.
+Receipt destinations must be new paths outside the repository. See [the Lean README](formalization/README.md) for the macOS cache-downloader workaround and exact scope. The source-model comparison executes actual Lean definitions: 32,064 matching-size tail comparisons agree with the separate historical oracle, and 2,904 survival comparisons agree with both the historical formulas and the new Lean formulas. These finite tests do not prove the missing universal probability bridges.
 
-The GitHub workflow repeats the manifest/replay, Lean audit, false controls, and source-model comparison. Green CI means those checks passed; it does not mean the main theorem is formalized.
+The GitHub workflow repeats the manifest/replay, Lean audit, false controls, and source-model comparison. Green CI checks the algebraic theorem and the declared partial process bridges. It does not certify the full matching classification.
 
 ## Rebuild the paper
 

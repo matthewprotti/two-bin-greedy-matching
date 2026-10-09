@@ -1,41 +1,53 @@
-# Lean: checked supporting library, incomplete classification
+# Lean: algebraic criterion proved; full matching classification still open
 
-Lean 4.19.0 compiles the supporting library. All **27 named theorems** are re-elaborated with `--trust=0` and have printed axiom dependencies contained in `{propext, Classical.choice, Quot.sound}`. The finite `decide` examples use no axioms. Three false claims fail at the intended source lines after positive import/control checks succeed.
+Lean 4.19.0 checks the complete paired falling-factorial criterion under the original definitions:
 
-**Neither `PairedClassificationTarget` nor `FullClassificationTarget` has a proof.** They are definitions of the desired propositions. A green build cannot upgrade either one into a checked theorem. See [SCOPE.md](SCOPE.md) and [STATUS.json](STATUS.json).
+```text
+TwoBin.paired_classification : PairedClassificationTarget
+```
 
-## Pinned environment
+For every natural `r <= q`, the quadratic condition is equivalent to the paired falling-factorial inequality for every natural `u,v`. The proof assumes no product-ratio, secant, or stochastic comparison lemma as an unexplained hypothesis.
 
-- Lean: `leanprover/lean4:v4.19.0`, compiler commit `6caaee842e94`.
-- Mathlib: `c44e0c8ee63ca166450922a373c7409c5d26b00b`.
-- Transitive dependency revisions: [lake-manifest.json](lake-manifest.json).
-- Successful audit receipt: [../evidence/lean-audit.json](../evidence/lean-audit.json).
-- Historical failed preflight: [../evidence/lean_NOT_RUN.json](../evidence/lean_NOT_RUN.json); it describes the earlier runtime, not this checked build.
+The binomial corollary, Pascal window difference, singleton monotonicity, and pure-singleton endpoint also check. These prove `survivalFormula_dominance` for the paper's explicit binomial formulas. **The universal identification of those formulas with actual source probabilities is still open.** `FullClassificationTarget` has no proof.
 
-## Commands
+All **83 named theorems** are re-elaborated with `--trust=0`; their printed axiom dependencies are contained in `{propext, Classical.choice, Quot.sound}`. Four false controls fail at their intended claims. The [scope matrix](SCOPE.md) separates complete results from remaining bridges.
 
-From this directory, with Lean/lake on PATH:
+## Proof organization
+
+- `Product.lean`: complete cross-multiplied product-ratio induction, endpoint inequalities including gaps 2 and 3, and large-index/zero-support cases.
+- `Symmetric.lean`: exact even/odd recurrence for the falling-factorial product, its evaluation identities, nonnegativity, and monotonicity; these prove the actual symmetric-secant inequality.
+- `Paired.lean`: all-case sufficiency and the sharp equivalence with the quadratic condition.
+- `Binomial.lean`: integer-index binomial coefficients and factorial conversion including every vanishing case; paper Corollary 4.
+- `Window.lean`: Pascal difference, monotonicity, endpoint, and comparison of the binomial survival formulas. These are formulas, not assumed probability laws of the process.
+- `SourceBridge.lean`: coin-word size and lengths, labeled-arrival size and lengths, fixed-to-random-order implication, load monotonicity, equality of actual and unconstrained no-saturation events, first-saturation index and truncation bounds.
+
+The secant proof expresses the manuscript's coefficient argument by the recurrence `(E,O) -> (cE + h²O, E + cO)` when a factor `c+h` is added. It proves the evaluation identity and both monotonicities directly. The old generic `oddSlope_monotone` remains checked but is not needed by the release theorem. This changes the formal proof organization, not the mathematical target.
+
+## Statement correspondence
+
+[ChallengeStatement.lean](ChallengeStatement.lean) imports Mathlib alone and gives a separate recursive falling factorial and literal universal criterion. [AlgebraicChallenge.lean](AlgebraicChallenge.lean) proves correspondence by induction on that recursion and applies the release theorem with no extra hypotheses. This is a machine-checked statement comparison prepared in the same project; it is **not an independent human correspondence audit**.
+
+`Definitions.lean` and `SourceModel.lean` are unchanged from the initial publication. The latter retains one persistent RK priority and independent per-job coins, including unused coins and repeated-degree arrival multiplicities.
+
+## Reproduction
+
+Pinned Lean: `leanprover/lean4:v4.19.0`, commit `6caaee842e94`. Mathlib: `c44e0c8ee63ca166450922a373c7409c5d26b00b`; transitive revisions are in `lake-manifest.json`.
 
 ```sh
+cd formalization
 MATHLIB_NO_CACHE_ON_UPDATE=1 lake update
-lake exe cache get TwoBin/Definitions.lean
-python3 -B build_and_audit.py --receipt /tmp/two-bin-lean-audit-new.json
+lake exe cache get TwoBin.lean
+python3 -B build_and_audit.py --receipt /tmp/two-bin-algebraic-audit-new.json
+cd ..
+python3 -B scripts/check_source_model.py --receipt /tmp/two-bin-source-check-new.json
 ```
 
-On the macOS 26.4.1 host used for preparation, the old toolchain's compiled cache downloader failed with a Mach-O `SG_READ_ONLY` error. Running the same pinned Mathlib cache code with Lean's interpreter succeeded:
+Receipts must use new paths outside the repository. On the preparation host (macOS 26.4.1), the old compiled cache downloader failed a Mach-O `SG_READ_ONLY` check. The same pinned cache code runs through the Lean interpreter:
 
 ```sh
-lake env lean --run .lake/packages/mathlib/Cache/Main.lean get TwoBin/Definitions.lean
+lake env lean --run .lake/packages/mathlib/Cache/Main.lean get TwoBin.lean
 ```
 
-This is a dependency-download workaround, not a proof-checker bypass. The Lean kernel, version, and theorem statements are unchanged.
+This only changes dependency download execution, not the proof checker. The [audit receipt](../evidence/lean-audit.json) binds source and dependency hashes, compiler output, every theorem's actual axioms, challenge checking, and false controls. The initial 27-theorem receipt is retained as `lean-audit-phase-a.json`.
 
-## Source repairs and audit controls
-
-The supplied `falling_add` induction did not compile: simplification left a `Nat.add` expression that the induction hypothesis did not rewrite. An explicit `change` and rewrite repair that proof without weakening its statement. The broad `import Mathlib` was replaced by the required modules to limit the download/build dependency set.
-
-The audit now covers every named theorem, scans for forbidden proof/trust constructs, checks positive counterparts, and requires each negative control to fail at the intended claim. It no longer accepts arbitrary nonzero exits as successful false controls. The audit receipt binds the source, dependency manifest, and audit script hashes.
-
-The finite source-model check uses the actual `coinWords`, `step`, `accepted`, tail counts, and `arrivalOrders` definitions, compared against the separate literal Python implementation. It includes empty words, zero-degree jobs, repeated degrees, swapped capacities, thresholds zero and above word length, and labeled-permutation multiplicities. This does not replace a universal correspondence proof.
-
-The original [CODEX_FORMALIZE.md](CODEX_FORMALIZE.md) remains the development roadmap. Its remaining phases require substantive new proofs, not just compilation repairs. Do not advertise the full result as Lean-checked or Lean-verified.
+The finite cross-check covers 32,064 matching tails and 2,904 survival comparisons, including empty words, zeros, swapped capacities, repeated degrees, and out-of-range thresholds. It does not replace the missing universal probability bridges.

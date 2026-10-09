@@ -2,25 +2,32 @@
 
 | Paper component | Lean evidence | Status |
 |---|---|---|
-| Falling-factorial recursion, split, zero support, nonnegativity, monotonicity | `Falling.lean` | Checked |
-| Paired inequality implies quadratic condition | `paired_implies_quadratic` | Checked converse only |
-| Quadratic condition in gap form; one-step product identity and sign | `gap_form`, `product_step_identity`, `product_step_nonnegative` | Checked |
-| Full product-ratio induction | No release theorem | Open |
-| Monotonicity of normalized odd-coefficient sum | `oddSlope_monotone` | Checked generic helper |
-| Falling polynomial expansion and actual symmetric-secant bound | No bridge from falling factorials to generic helper | Open |
-| Combining product/secant bounds | `combine_product_secant` | Checked conditional helper; hypotheses still need proof |
-| All cases of paired-factorial sufficiency / Lemma 3 | `PairedClassificationTarget` is only a proposition definition | Open |
-| Binomial conversion including all support boundaries / Corollary 4 | No theorem | Open |
-| Literal RV/RK process | `SourceModel.lean` defines coin sample space and persistent ranking priority | Defined; finite execution checks only |
-| Four small source count equalities | `reversal_*_count`, `adjacent_*_count` | Kernel checked; no axioms |
-| First-saturation distribution and binomial windows | No source-model identification theorem | Open |
-| Monotone clipped continuation and nonnegative mixtures | `FiniteKernel.lean` | Checked algebraic helpers |
-| Actual continuation distribution and summation-by-parts identity | `tail_comparison_from_identity` assumes the identity | Open universal bridge |
-| Witness polynomial factorization, sign, denominator positivity | `Witness.lean` | Checked algebraic expressions |
-| Fixed-order and random-order witness expressions equal actual process gaps | No universal source-count bridge | Open |
-| Labeled random-arrival weighting | Multiplicities retained by definition; finite oracle checks | Universal combinatorial proof open |
-| Theorem 1 for all capacities and finite words | `FullClassificationTarget` is only a proposition definition | Open |
-| Theorem 2's universal regimes | No assembly theorem | Open |
-| Independent informal-to-formal statement audit | None | Not performed |
+| Falling recursion, split, zero support, nonnegativity, monotonicity | `Falling.lean` | Proved |
+| Quadratic converse, gap form and product-step identity | `Falling.lean` | Proved |
+| Full product-ratio induction | `product_ratio_bound` | Proved |
+| Interior endpoint, including gaps 2 and 3 | `interior_endpoint` | Proved |
+| Actual symmetric-secant bound | `midpointParts_identity`, `midpointParts_monotone`, `symmetric_secant_int` | Proved by exact even/odd product recurrence |
+| Axes, large indices and zero-support cases | `falling_add_le_mul`, `paired_large_left`, `quadratic_implies_paired` | Proved |
+| Complete paired-factorial classification / Lemma 3 | `paired_classification : PairedClassificationTarget` | Proved under unchanged definitions |
+| Literal statement comparison | `TwoBinChallenge.release_matches_literal_statement` | Proved; not independently human-audited |
+| Binomial conversion / Corollary 4 | `binomial_factorial_bridge`, `paired_binomial_shift` | Proved including all vanishing cases |
+| Pascal window difference / equation (11) | `rankingSurvivalFormula_step` | Proved |
+| Singleton monotonicity and endpoint | `rankingSurvivalFormula_monotone`, `pure_singleton_endpoint` | Proved |
+| Comparison of the explicit binomial survival formulas | `survivalFormula_dominance` | Proved |
+| Literal RV/RK process | Original `SourceModel.lean` | Definitions unchanged |
+| Fair coin sample-space size and word length | `coinWords_length`, `coinWords_mem_length` | Proved |
+| Arrival-order total count and word length | `arrivalOrders_length`, `arrivalOrders_mem_length` | Proved: n! entries, including repeated degrees |
+| Uniform labeled-permutation law and per-arrangement multiplicities | Total n! count is proved; a bijection/counting correspondence is still needed | Open |
+| Fixed-order dominance implies random-order dominance | `fixedDominance_implies_randomOrderDominance` | Proved for the actual source count definitions |
+| Actual and unconstrained no-saturation events agree | `run_unsaturated_iff`, `sourceSurvivalCount_eq_free` | Proved for arbitrary finite event lists, including zeros |
+| First-saturation index, truncation and no-saturation event | `firstSaturationIndex_none_iff`, `firstSaturationIndex_bounds`, `truncatedFirstSaturation_le_length`, `sourceSurvivalCount_eq_no_saturation` | Proved |
+| Source no-saturation counts equal binomial formulas | No universal counting bridge yet | Open; 2,904 finite comparisons pass |
+| Future-coin independence, common continuation distribution, no rejection through first saturation | No complete source-model theorem yet | Open |
+| Actual summation-by-parts identity and fixed-order sufficiency | `tail_comparison_from_identity` still assumes the identity | Open |
+| Witness polynomial signs and denominator positivity | `Witness.lean` | Proved algebraic expressions |
+| Witness expressions equal actual fixed/random-order source gaps | No universal source-count bridge yet | Open |
+| Theorem 1 / all capacities and words | `FullClassificationTarget` remains only a target definition | Open |
+| Theorem 2 / universal regimes | No assembly theorem | Open |
+| Independent human statement audit | None | Not performed |
 
-The handoff's Phase A (build/audit of the supplied supporting source) is completed. Phases B-E are not complete. No theorem statement was weakened to obtain the build. None of the computational receipts certify the missing universal bridges.
+Phase B of the handoff is complete. The analytic binomial/window part of C and structural source-model parts of C-E are complete. The full matching classification has not been formalized. No theorem statement or source-model definition was weakened to obtain these results.

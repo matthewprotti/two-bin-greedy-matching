@@ -1,28 +1,34 @@
 {
-  "schema": "two-bin-formalization-status.v2",
+  "schema": "two-bin-formalization-status.v3",
   "date": "2026-10-09",
   "compiler_status": "Lean 4.19.0; commit 6caaee842e94; arm64 macOS",
-  "build": "PASS_PARTIAL_LIBRARY",
-  "axiom_audit": "PASS_27_NAMED_THEOREMS_STANDARD_AXIOMS_ONLY",
-  "negative_controls": "PASS_3_FALSE_CLAIMS_REJECTED",
+  "build": "PASS_ALGEBRAIC_CRITERION_AND_PARTIAL_SOURCE_BRIDGES",
+  "axiom_audit": "PASS_83_NAMED_THEOREMS_STANDARD_AXIOMS_ONLY",
+  "negative_controls": "PASS_4_FALSE_CLAIMS_REJECTED",
   "source_statement_audit": "NOT_RUN",
-  "paired_factorial_sufficiency": "OPEN_FORMALIZATION_TASK",
-  "source_model_bridges": "OPEN_FORMALIZATION_TASK",
+  "paired_factorial_sufficiency": "PROVED: TwoBin.quadratic_implies_paired",
+  "source_model_bridges": "PARTIAL: no-saturation event, stopping-index bounds, sample-space sizes, and averaging implication proved; distribution and continuation bridges remain open",
   "full_classification": "NOT_PROVED_IN_LEAN",
   "draft_source_only": false,
   "toolchain": "leanprover/lean4:v4.19.0",
   "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
   "completed_evidence": [
-    "Historical Python fresh-copy replay",
-    "Partial Lean library compilation and trust-zero re-elaboration",
-    "All 27 named theorem axiom reports",
-    "Positive control imports plus three false-claim rejections",
-    "Actual Lean source model versus separate Python oracle: 16032 fixed and 16032 labeled-random-arrival tails"
+    "Complete algebraic criterion under unchanged target definitions",
+    "Binomial shift including every zero-support case",
+    "Pascal window identity, monotonicity and pure-singleton endpoint",
+    "Literal source-model structural bridges and first-saturation index",
+    "83 named theorem axiom reports and trust-zero re-elaboration",
+    "Four false controls rejected at intended claims",
+    "32064 exact matching-tail comparisons and 2904 survival comparisons"
   ],
   "prohibited_labels": [
     "Lean-verified",
     "Lean-checked for the full theorem",
     "end-to-end formalized"
   ],
-  "source_model_checks": "PASS_32064_EXACT_TAIL_COMPARISONS; finite bounds in evidence/source-model-check.json"
+  "source_model_checks": "PASS; see evidence/source-model-check.json for finite bounds",
+  "paired_factorial_classification": "PROVED: TwoBin.paired_classification",
+  "binomial_corollary": "PROVED: TwoBin.paired_binomial_shift",
+  "survival_formula_comparison": "PROVED: TwoBin.survivalFormula_dominance",
+  "literal_algebraic_statement": "PASS: TwoBinChallenge.release_matches_literal_statement; not an independent human audit"
 }

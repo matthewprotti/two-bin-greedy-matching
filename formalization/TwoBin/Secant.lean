@@ -1,7 +1,8 @@
 import TwoBin.Falling
 
-/-! CHECKED SUPPORTING SOURCE. The polynomial-product expansion bridge remains open.
-    These are generic sufficient components, not a proof of PairedBound. -/
+/-! Generic odd-coefficient and combination helpers. The complete falling-factorial
+    secant bound is proved by the exact even/odd recurrence in Symmetric.lean;
+    Paired.lean assembles the unconditional paired-factorial criterion. -/
 namespace TwoBin
 open Finset
 
