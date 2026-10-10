@@ -457,13 +457,13 @@ The universal results rest on the proofs above. Exact finite calculations are su
 
 A supplied positive review of the consolidated proof and replay receipt have unidentified provider provenance. No independent human expert review or journal peer review is established. The historical archives retain their original status labels.
 
-Lean 4.19.0 proves the paired-factorial criterion, binomial corollary, and survival-formula comparison. All 83 named theorems use only standard logical axioms; four false controls are rejected. The full matching classification remains unproved in Lean: its source-distribution and continuation bridges are incomplete.
+Lean 4.19.0 proves the full matching classification and all four regimes for the original source model, including both witness formulas. All 272 named theorems use only standard logical axioms; seven false controls are rejected. Independent human statement correspondence review remains outstanding.
 
 The question investigated here was formulated during this project as an unequal-capacity extension motivated by the preceding references. A bounded literature search found no matching classification, but novelty and priority have not been cleared with the source authors or domain specialists. No theorem for three or more bins is asserted.
 
 ### AI contribution and author responsibility
 
-This is human-directed, substantially AI-developed mathematical work. Matthew Protti selected the research direction, commissioned the successive extensions and reviews, required reproducible evidence and explicit scope boundaries, and directed preparation for publication. OpenAI ChatGPT research sessions identified in the project as GPT-6 Astra Pro generated substantial portions of the constructions, algebraic and probabilistic arguments, verification programs, adversarial checks, and manuscript. OpenAI Codex developed and audited the partial Lean formalization and cross-checked its executable model. AI systems are tools, not coauthors. Matthew Protti is the responsible human author; release approval is distinct from a claim of independent human reconstruction of every proof step.
+This is human-directed, substantially AI-developed mathematical work. Matthew Protti selected the research direction, commissioned the successive extensions and reviews, required reproducible evidence and explicit scope boundaries, and directed preparation for publication. OpenAI ChatGPT research sessions identified in the project as GPT-6 Astra Pro generated substantial portions of the constructions, algebraic and probabilistic arguments, verification programs, adversarial checks, and manuscript. OpenAI Codex completed and audited the Lean formalization and cross-checked its executable model. AI systems are tools, not coauthors. Matthew Protti is the responsible human author; release approval is distinct from a claim of independent human reconstruction of every proof step.
 
 \begin{thebibliography}{9}
 \bibitem{Arnosti2022}

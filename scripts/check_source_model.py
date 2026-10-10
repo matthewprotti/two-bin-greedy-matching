@@ -43,7 +43,17 @@ def main : IO Unit := do
             let orders := TwoBin.arrivalOrders word
             let urv := (orders.map (fun w => TwoBin.rvCount a b w k)).sum
             let urk := (orders.map (fun w => TwoBin.rkCount a b w k)).sum
-            IO.println s!"{a},{b},{n},{code},{k},{rv},{rk},{orders.length},{urv},{urk}"
+            let kv := TwoBin.tailKernel a b false false k word (0,0)
+            let kr := (TwoBin.tailKernel a b true false k word (0,0) + TwoBin.tailKernel a b true true k word (0,0))/2
+            IO.println s!"{a},{b},{n},{code},{k},{rv},{rk},{orders.length},{urv},{urk},{kv.num},{kv.den},{kr.num},{kr.den}"
+  for a in [1:4] do
+    for b in [a:6] do
+      if 4 ≤ a+b && a+b ≤ 6 then
+        let fw := TwoBin.fixedWitness (a-1) (b-1)
+        let uw := TwoBin.uniformWitness (a-1) (b-1)
+        let fg := TwoBin.matchingGap a b (a+b-1) fw
+        let ug := TwoBin.randomMatchingGap a b (a+b-1) uw / (TwoBin.arrivalOrders uw).length
+        IO.println s!"W,{a},{b},{fg.num},{fg.den},{ug.num},{ug.den}"
 '''
 
 
@@ -76,8 +86,22 @@ def main():
         result = subprocess.run(['lake', 'env', 'lean', '--run', str(driver)], cwd=ROOT/'formalization', text=True, capture_output=True)
         if result.returncode:
             raise RuntimeError(result.stdout+result.stderr)
-        cache, fixed, uniform, survival_checks = {}, 0, 0, 0
+        cache, fixed, uniform, survival_checks, witness_checks = {}, 0, 0, 0, 0
         for row in result.stdout.splitlines():
+            if row.startswith('W,'):
+                a,b,fnum,fden,unum,uden = map(int,row.split(',')[1:])
+                def gap(word):
+                    def all_matched(algorithm):
+                        return oracle.enumerate_distribution((a,b), word, algorithm)[0].get(a+b-1,Fraction(0))
+                    return all_matched('rv')-all_matched('ranking')
+                fw = (1,)*(a+b-4)+(2,2,1)
+                uw = (2,2)+(1,)*(a+b-3)
+                orders = list(permutations(uw))
+                assert Fraction(fnum,fden)==model.fixed_witness_gap((a,b))==gap(fw), row
+                expected = sum((gap(w) for w in orders),Fraction(0))/len(orders)
+                assert Fraction(unum,uden)==model.random_witness_gap((a,b))==expected, row
+                witness_checks += 2
+                continue
             if row.startswith('S,'):
                 a,b,n,code,svrv,svrk,vnum,vden,rnum,rden = map(int,row.split(',')[1:])
                 digits, c = [], code
@@ -91,7 +115,7 @@ def main():
                 assert Fraction(svrk,2**(n+1))==expected_rk==Fraction(rnum,rden), row
                 survival_checks += 2
                 continue
-            a,b,n,code,k,rv,rk,order_count,urv,urk = map(int,row.split(','))
+            a,b,n,code,k,rv,rk,order_count,urv,urk,kvnum,kvden,krnum,krden = map(int,row.split(','))
             degrees=[]
             c=code
             for _ in range(n):
@@ -104,8 +128,8 @@ def main():
                 return cache[key]
             def tail(word, algorithm):
                 return sum((p for size,p in law(word,algorithm).items() if size>=k),Fraction(0))
-            assert Fraction(rv,2**n)==tail(degrees,'rv'), row
-            assert Fraction(rk,2**(n+1))==tail(degrees,'ranking'), row
+            assert Fraction(rv,2**n)==tail(degrees,'rv')==Fraction(kvnum,kvden), row
+            assert Fraction(rk,2**(n+1))==tail(degrees,'ranking')==Fraction(krnum,krden), row
             fixed += 2
             orders=list(permutations(degrees))
             assert order_count==len(orders), row
@@ -116,11 +140,15 @@ def main():
         expected_rows=12*sum((3**n)*(n+2) for n in range(5))
         assert fixed==uniform==2*expected_rows
         assert survival_checks==2*12*sum(3**n for n in range(5))
+        assert witness_checks==14
         receipt={'status':'PASS','scope':'finite execution, not universal formal bridge',
                  'capacities':'1 <= a <= 3; 1 <= b <= 4 (including label swaps)',
                  'degrees':[0,1,2],'word_lengths':'0..4','degree_words_per_capacity':121,
                  'fixed_tail_comparisons':fixed,'uniform_arrival_tail_comparisons':uniform,
+                 'tail_kernel_comparisons_with_original_counts_and_oracle':fixed,
                  'survival_comparisons_actual_lean_vs_historical_formula_and_lean_formula':survival_checks,
+                 'witness_gap_comparisons_actual_lean_vs_historical_formula_and_oracle':witness_checks,
+                 'witness_capacities':'1 <= a <= b; 4 <= a+b <= 6',
                  'thresholds':'0..word_length+1','lean_driver_sha256':hashlib.sha256(DRIVER.encode()).hexdigest(),
                  'oracle_sha256':hashlib.sha256(oracle_bytes).hexdigest(),
                  'historical_formula_model_sha256':hashlib.sha256(model_bytes).hexdigest(),

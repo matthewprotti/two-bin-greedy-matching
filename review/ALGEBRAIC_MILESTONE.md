@@ -1,3 +1,5 @@
+> Historical milestone, superseded by [the full classification](FULL_CLASSIFICATION.md). The open obligations described below are now proved. Its original audit is retained as `evidence/lean-audit-algebraic.json`.
+
 # Algebraic formalization milestone — 9 October 2026
 
 The complete paired falling-factorial classification is now proved in Lean under the original `PairedClassificationTarget`. This is the paper's algebraic engine, including both directions, all natural indices, and zero-support boundaries. The full matching classification remains open in Lean.
@@ -12,4 +14,4 @@ The source-model work proves sample-space and arrival-order sizes, the fixed-to-
 
 Validation comprises the full positive build, trust-zero re-elaboration, all 83 named theorem axiom reports, the literal statement comparison, and four deliberately false controls rejected at their claims. Dependencies are restricted to the standard axioms `propext`, `Classical.choice`, and `Quot.sound`. Finite source-model cross-checks cover 32,064 matching tails and 2,904 survival comparisons against the historical implementations.
 
-The historical classification archive, core target definitions, literal process definitions, Lean version, and dependency revisions are unchanged. See [SCOPE.md](../formalization/SCOPE.md) for the precise claim boundary and [lean-audit.json](../evidence/lean-audit.json) for the compiler evidence.
+The historical classification archive, core target definitions, literal process definitions, Lean version, and dependency revisions are unchanged. See [SCOPE.md](../formalization/SCOPE.md) for the precise claim boundary and [lean-audit-algebraic.json](../evidence/lean-audit-algebraic.json) for the compiler evidence.

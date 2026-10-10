@@ -13,8 +13,8 @@ The paper establishes this classification for every fixed degree word and, separ
 ## Status and reading order
 
 1. [Manuscript (PDF)](paper/manuscript.pdf): complete elementary paper proof. [LaTeX source](paper/manuscript.tex) and [readable proof](paper/manuscript.md) are included.
-2. [Algebraic milestone](review/ALGEBRAIC_MILESTONE.md) and [initial review](review/CODEX_REVIEW.md): what was checked and what remains uncertain. A positive returned review has unidentified provider provenance; no independent human expert review or peer review is claimed.
-3. [Lean scope](formalization/README.md): **The complete paired-factorial criterion, binomial corollary, and survival-formula comparison are proved in Lean.** All 83 named theorems have audited axioms. The full matching classification is still unproved: source-probability and continuation bridges remain open.
+2. [Full formalization review](review/FULL_CLASSIFICATION.md), [historical algebraic milestone](review/ALGEBRAIC_MILESTONE.md), and [initial review](review/CODEX_REVIEW.md): what was checked and what remains uncertain. A positive returned review has unidentified provider provenance; no independent human expert review or peer review is claimed.
+3. [Lean scope](formalization/README.md): **The full matching classification and all four regimes are proved in Lean for the original source model.** All 272 named theorems have audited axioms. Both arrival models, strict witnesses, and the paper's two closed witness formulas are checked. Independent human statement correspondence review has not been performed.
 4. [Prior-work report](research/OVERLAP_REPORT.md): a bounded search found no matching classification. Novelty and priority remain uncleared. Arnosti already observed unequal-capacity reversals; the claimed contribution is the sharp classification.
 5. [Claim matrix](release/CLAIM_MATRIX.json) and [scope matrix](formalization/SCOPE.md).
 
@@ -30,7 +30,7 @@ python3 -B VERIFY_PACKAGE.py
 
 This verifies the publication manifest, checks the pinned historical archive, and reruns its full exact-arithmetic suite in a fresh temporary copy. It excludes generated Git, Lean, and Python cache directories. The immutable October 8 archive and its historical status labels remain unchanged.
 
-## Reproduce the algebraic criterion and partial process bridges
+## Reproduce the full classification
 
 Install Lean through the official Lean toolchain distribution, then use the checked-in toolchain and dependency manifest:
 
@@ -43,9 +43,9 @@ cd ..
 python3 -B scripts/check_source_model.py --receipt /tmp/two-bin-source-model.json
 ```
 
-Receipt destinations must be new paths outside the repository. See [the Lean README](formalization/README.md) for the macOS cache-downloader workaround and exact scope. The source-model comparison executes actual Lean definitions: 32,064 matching-size tail comparisons agree with the separate historical oracle, and 2,904 survival comparisons agree with both the historical formulas and the new Lean formulas. These finite tests do not prove the missing universal probability bridges.
+Receipt destinations must be new paths outside the repository. See [the Lean README](formalization/README.md) for the macOS cache-downloader workaround and exact scope. The source-model comparison executes actual Lean definitions: 32,064 matching-size tail comparisons agree with the separate historical oracle, and 2,904 survival comparisons agree with both the historical formulas and the new Lean formulas. The recursive continuation kernels also agree with the original counts on 16,032 tails, and 14 bounded witness-gap checks agree with the historical formulas and oracle. These are finite execution checks; the universal source-to-probability bridges are proved separately in Lean.
 
-The GitHub workflow repeats the manifest/replay, Lean audit, false controls, and source-model comparison. Green CI checks the algebraic theorem and the declared partial process bridges. It does not certify the full matching classification.
+The GitHub workflow repeats the manifest/replay, Lean audit, false controls, and source-model comparison. The workflow checks the full source-model classification and regimes. A successful run certifies the checked formal statements, not independent human correspondence review, novelty, or peer review. Consult the pull request for the exact revision's CI result.
 
 ## Rebuild the paper
 
@@ -53,5 +53,5 @@ The GitHub workflow repeats the manifest/replay, Lean audit, false controls, and
 python3 paper/build_pdf.py --out-dir /tmp/two-bin-paper-new
 ```
 
-Use a new directory outside the repository. The script supports pdfLaTeX or Tectonic. The mathematical statements and display blocks are unchanged from the supplied manuscript; the verification and AI-attribution paragraphs reflect the checked supporting library.
+Use a new directory outside the repository. The script supports pdfLaTeX or Tectonic. The mathematical statements and display blocks are unchanged from the supplied manuscript; the verification and AI-attribution paragraphs reflect the completed formalization (10 October 2026).
 

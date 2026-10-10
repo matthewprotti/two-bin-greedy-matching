@@ -1,19 +1,21 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "paper_proof": "COMPLETE",
   "returned_review": "POSITIVE_PROVIDER_UNIDENTIFIED",
   "exact_historical_replay": "PASS_THIS_SESSION",
-  "full_Lean_formalization": "NOT_COMPLETE",
+  "full_Lean_formalization": "COMPLETE_FOR_ORIGINAL_SOURCE_MODEL_AND_ALL_FOUR_REGIMES",
   "novelty": "BOUNDED_SEARCH_NO_MATCH_FOUND_NOT_CLEARED",
   "specialist_contact": "DRAFTED_NOT_SENT",
   "github_publication": "PUBLIC_RESEARCH_REPOSITORY; see Git history for exact revisions",
-  "vibemathed": "DRAFT_ONLY_NOT_SUBMITTED; registry fit disclosed for curator assessment",
+  "vibemathed": "Assistant preparation only; no submission by assistant; current external entry status not checked",
   "three_bin_claim": "NONE",
   "author": "Matthew Protti",
   "affiliation": "Independent Researcher",
   "history_archive_sha256": "97b6885c2f40a71101b58e2245d18f96335875306c3df8447754e52e5f0618d3",
-  "Lean_supporting_library": "83_NAMED_THEOREMS_COMPILED_AXIOMS_AUDITED",
+  "Lean_supporting_library": "272_NAMED_THEOREMS_COMPILED_AXIOMS_AUDITED",
   "Lean_paired_factorial_classification": "PROVED_UNDER_ORIGINAL_DEFINITIONS",
   "Lean_binomial_corollary": "PROVED_INCLUDING_ZERO_SUPPORT",
-  "Lean_survival_formula_comparison": "PROVED; SOURCE_DISTRIBUTION_BRIDGE_STILL_OPEN"
+  "Lean_survival_formula_comparison": "PROVED_AND_IDENTIFIED_WITH_ACTUAL_SOURCE_PROBABILITIES",
+  "Lean_witness_identities": "PROVED_FOR_ACTUAL_FIXED_AND_LABELED_RANDOM_ARRIVAL_PROBABILITIES",
+  "Lean_statement_independent_human_audit": "NOT_PERFORMED"
 }

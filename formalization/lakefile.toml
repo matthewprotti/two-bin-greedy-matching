@@ -1,6 +1,6 @@
 name = "twoBin"
 version = "0.1.0"
-defaultTargets = ["TwoBin", "ChallengeStatement", "AlgebraicChallenge"]
+defaultTargets = ["TwoBin", "ChallengeStatement", "AlgebraicChallenge", "FullChallenge"]
 
 [[require]]
 name = "mathlib"
@@ -15,3 +15,9 @@ name = "ChallengeStatement"
 
 [[lean_lib]]
 name = "AlgebraicChallenge"
+
+[[lean_lib]]
+name = "FullChallengeStatement"
+
+[[lean_lib]]
+name = "FullChallenge"

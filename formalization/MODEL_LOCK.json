@@ -1,0 +1,8 @@
+{
+  "schema": "two-bin-model-lock.v1",
+  "baseline_commit": "fa1f8d8483f11526ea32f90d14fc243f25245560",
+  "files": {
+    "TwoBin/Definitions.lean": "162aca3f6f95c0b6a7ed9865af9c0d2a864b18c067161c70afc065167a2cdcb8",
+    "TwoBin/SourceModel.lean": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961"
+  }
+}

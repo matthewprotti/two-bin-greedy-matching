@@ -3,31 +3,27 @@
 | Paper component | Lean evidence | Status |
 |---|---|---|
 | Falling recursion, split, zero support, nonnegativity, monotonicity | `Falling.lean` | Proved |
-| Quadratic converse, gap form and product-step identity | `Falling.lean` | Proved |
-| Full product-ratio induction | `product_ratio_bound` | Proved |
-| Interior endpoint, including gaps 2 and 3 | `interior_endpoint` | Proved |
-| Actual symmetric-secant bound | `midpointParts_identity`, `midpointParts_monotone`, `symmetric_secant_int` | Proved by exact even/odd product recurrence |
-| Axes, large indices and zero-support cases | `falling_add_le_mul`, `paired_large_left`, `quadratic_implies_paired` | Proved |
-| Complete paired-factorial classification / Lemma 3 | `paired_classification : PairedClassificationTarget` | Proved under unchanged definitions |
-| Literal statement comparison | `TwoBinChallenge.release_matches_literal_statement` | Proved; not independently human-audited |
-| Binomial conversion / Corollary 4 | `binomial_factorial_bridge`, `paired_binomial_shift` | Proved including all vanishing cases |
-| Pascal window difference / equation (11) | `rankingSurvivalFormula_step` | Proved |
-| Singleton monotonicity and endpoint | `rankingSurvivalFormula_monotone`, `pure_singleton_endpoint` | Proved |
-| Comparison of the explicit binomial survival formulas | `survivalFormula_dominance` | Proved |
-| Literal RV/RK process | Original `SourceModel.lean` | Definitions unchanged |
-| Fair coin sample-space size and word length | `coinWords_length`, `coinWords_mem_length` | Proved |
-| Arrival-order total count and word length | `arrivalOrders_length`, `arrivalOrders_mem_length` | Proved: n! entries, including repeated degrees |
-| Uniform labeled-permutation law and per-arrangement multiplicities | Total n! count is proved; a bijection/counting correspondence is still needed | Open |
-| Fixed-order dominance implies random-order dominance | `fixedDominance_implies_randomOrderDominance` | Proved for the actual source count definitions |
-| Actual and unconstrained no-saturation events agree | `run_unsaturated_iff`, `sourceSurvivalCount_eq_free` | Proved for arbitrary finite event lists, including zeros |
-| First-saturation index, truncation and no-saturation event | `firstSaturationIndex_none_iff`, `firstSaturationIndex_bounds`, `truncatedFirstSaturation_le_length`, `sourceSurvivalCount_eq_no_saturation` | Proved |
-| Source no-saturation counts equal binomial formulas | No universal counting bridge yet | Open; 2,904 finite comparisons pass |
-| Future-coin independence, common continuation distribution, no rejection through first saturation | No complete source-model theorem yet | Open |
-| Actual summation-by-parts identity and fixed-order sufficiency | `tail_comparison_from_identity` still assumes the identity | Open |
-| Witness polynomial signs and denominator positivity | `Witness.lean` | Proved algebraic expressions |
-| Witness expressions equal actual fixed/random-order source gaps | No universal source-count bridge yet | Open |
-| Theorem 1 / all capacities and words | `FullClassificationTarget` remains only a target definition | Open |
-| Theorem 2 / universal regimes | No assembly theorem | Open |
-| Independent human statement audit | None | Not performed |
+| Product-ratio induction and interior endpoint | `product_ratio_bound`, `interior_endpoint` | Proved, including gaps 2 and 3 |
+| Symmetric-secant comparison | `midpointParts_identity`, `midpointParts_monotone`, `symmetric_secant_int` | Proved by exact product recurrence |
+| Paired-factorial classification / Lemma 3 | `paired_classification` | Proved under original definitions |
+| Binomial conversion / Corollary 4 | `binomial_factorial_bridge`, `paired_binomial_shift` | Proved including vanishing cases |
+| Pascal difference / equation (11), monotonicity, endpoint | `rankingSurvivalFormula_step`, `rankingSurvivalFormula_monotone`, `pure_singleton_endpoint` | Proved |
+| Survival-formula comparison | `survivalFormula_dominance` | Proved |
+| Literal RV/RK process and capacity criterion | Original `Definitions.lean`, `SourceModel.lean`; `MODEL_LOCK.json` | Unchanged from original publication |
+| Coin counts, arrival count, fixed-to-random implication | `SourceBridge.lean` | Proved |
+| Actual/unconstrained no-saturation equivalence and stopping index | `run_unsaturated_iff`, `sourceSurvivalCount_eq_free`, `firstSaturationIndex_bounds` | Proved |
+| Actual source probabilities equal binomial formulas | `freeFirstMass_binomial`, `survivalProbability_binomial`, `rv_survival_formula`, `ranking_survival_formula` | Proved universally |
+| Actual matching tails equal recursive finite expectations | `tailKernel_source`, `tailKernel_rvCount`, `tailKernel_rkCount` | Proved |
+| Common continuation after saturation and monotone gains | `tailKernel_saturated`, `Continuation.lean` | Proved from the process |
+| Actual finite tail identity and fixed-order sufficiency | `source_tail_expansion`, `fixed_sufficiency`, `capacityRegion_implies_fixed` | Proved without assuming the identity |
+| Uniform labeled arrival distribution and repeated-degree multiplicity | `arrivalOrders_labeled_indices`, `labeled_arrival_orders_nodup`, `Insertion.lean` | Proved |
+| Fixed witness / equation (17) | `fixedWitness_closed_formula`, `fixedWitness_gap_negative` | Proved for actual source probabilities |
+| Random witness / finite sum and equation (23) | `uniformWitness_gap`, `uniformWitness_closed_formula`, `uniformWitness_gap_negative` | Proved with labeled weighting and positive denominators |
+| Theorem 1: both arrival models | `full_classification : FullClassificationTarget` | Proved |
+| Reverse dominance and equality iff statements | `fixed_reverse_classification`, `random_reverse_classification`, `fixed_equality_classification`, `random_equality_classification` | Proved |
+| Theorem 2: all four regimes, including strict examples | `four_regimes : FourRegimeTarget` | Proved |
+| Literal expanded release statements | `TwoBinChallenge.release_matches_full_statement`, `TwoBinChallenge.regimes_match_literal_statement` | Proved in project-authored challenge files |
+| Independent human statement correspondence audit | None | Not performed |
+| Novelty/priority and peer review | Bounded prior-work search only | Not established |
 
-Phase B of the handoff is complete. The analytic binomial/window part of C and structural source-model parts of C-E are complete. The full matching classification has not been formalized. No theorem statement or source-model definition was weakened to obtain these results.
+The full classification and regimes are complete in Lean as of 10 October 2026. No original target or process definition was weakened. The historical handoff's proof obligations are discharged by the exact finite-expectation development; no additional mathematical hypothesis substitutes for a missing bridge. The audit covers 272 named theorems and seven deliberately false controls. Formal theorem checking is distinct from independent judgment that the model captures the intended research question.

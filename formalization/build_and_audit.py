@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile and audit the algebraic criterion and partial source-model bridges.
+"""Compile and audit the full matching classification and all regime statements.
 The receipt must be new and outside this repository. Run after `lake update` and
 `lake exe cache get`. No external services or credentials are used by this script.
 """
@@ -41,7 +41,7 @@ def uncomment(text):
 
 def source_hashes():
     paths = list(ROOT.glob('*.lean')) + list((ROOT/'TwoBin').glob('*.lean')) + list((ROOT/'negative').glob('*.lean'))
-    paths += [ROOT/'lean-toolchain', ROOT/'lakefile.toml', ROOT/'lake-manifest.json', Path(__file__)]
+    paths += [ROOT/'lean-toolchain', ROOT/'lakefile.toml', ROOT/'lake-manifest.json', ROOT/'MODEL_LOCK.json', Path(__file__)]
     return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths) if p.is_file()}
 
 
@@ -51,8 +51,8 @@ def main():
     out = parser.parse_args().receipt.resolve()
     if out.exists() or out.is_relative_to(ROOT.parent):
         raise SystemExit('Receipt must be a new path outside the repository.')
-    record = {'schema': 'two-bin-lean-build.v3', 'source_sha256': source_hashes(),
-              'full_classification': 'NOT_PROVED_IN_LEAN',
+    record = {'schema': 'two-bin-lean-build.v4', 'source_sha256': source_hashes(),
+              'full_classification': 'NOT_YET_AUDITED',
               'paired_sufficiency': 'NOT_YET_AUDITED',
               'source_statement_independent_audit': 'NOT_RUN',
               'platform': platform.platform(), 'steps': []}
@@ -74,6 +74,13 @@ def main():
         for p in sorted((ROOT/'TwoBin').glob('*.lean')) + sorted(ROOT.glob('*.lean')):
             if re.search(BANNED, uncomment(p.read_text())):
                 raise RuntimeError('Forbidden proof/trust construct in ' + p.name)
+        lock = json.loads((ROOT/'MODEL_LOCK.json').read_text())
+        if set(lock['files']) != {'TwoBin/Definitions.lean', 'TwoBin/SourceModel.lean'}:
+            raise RuntimeError('Model lock must cover both original definition files')
+        for name, expected in lock['files'].items():
+            if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != expected:
+                raise RuntimeError('Original model changed: '+name)
+        record['model_lock'] = lock
         declarations = []
         for p in sorted((ROOT/'TwoBin').glob('*.lean')) + sorted(ROOT.glob('*.lean')):
             code = uncomment(p.read_text())
@@ -94,6 +101,8 @@ def main():
             run(['lake', 'env', 'lean', '--trust=0', str(path.relative_to(ROOT))])
         run(['lake', 'env', 'lean', '--trust=0', 'ChallengeStatement.lean'])
         run(['lake', 'env', 'lean', '--trust=0', 'AlgebraicChallenge.lean'])
+        run(['lake', 'env', 'lean', '--trust=0', 'FullChallengeStatement.lean'])
+        run(['lake', 'env', 'lean', '--trust=0', 'FullChallenge.lean'])
         output = run(['lake', 'env', 'lean', '--trust=0', 'AxiomAudit.lean'])
         dependencies = {}
         for name in audited:
@@ -111,7 +120,7 @@ def main():
         # Positive counterparts establish the imports, notation and evaluation path.
         run(['lake', 'env', 'lean', '--trust=0', 'PositiveControls.lean'])
         controls = {}
-        for name, expected in [('FalseNumeric', 'decide'), ('FalseQuadratic', 'unsolved goals'), ('FalseRankingNumerator', 'decide'), ('FalsePairedBound', 'unsolved goals')]:
+        for name, expected in [('FalseNumeric', 'decide'), ('FalseQuadratic', 'unsolved goals'), ('FalseRankingNumerator', 'decide'), ('FalsePairedBound', 'unsolved goals'), ('FalseFixedDominance', 'unsolved goals'), ('FalseRandomDominance', 'unsolved goals'), ('FalseEquality', 'unsolved goals')]:
             output = run(['lake', 'env', 'lean', '--trust=0', f'negative/{name}.lean'], expect_failure=True)
             if f'negative/{name}.lean:3:' not in output or expected not in output:
                 raise RuntimeError('Negative control did not fail at its intended false claim: '+name)
@@ -125,9 +134,13 @@ def main():
         record['paired_classification'] = 'TwoBin.paired_classification'
         record['binomial_corollary'] = 'TwoBin.paired_binomial_shift'
         record['formula_comparison'] = 'TwoBin.survivalFormula_dominance'
-        record['full_probabilistic_bridges'] = 'NOT_COMPLETE'
+        record['full_probabilistic_bridges'] = 'PROVED_FROM_ORIGINAL_SOURCE_COUNTS'
+        record['full_classification'] = 'PROVED: TwoBin.full_classification'
+        record['four_regimes'] = 'PROVED: TwoBin.four_regimes'
+        record['fixed_witness_identity'] = 'TwoBin.fixedWitness_closed_formula'
+        record['uniform_witness_identity'] = 'TwoBin.uniformWitness_closed_formula'
         record['literal_statement_challenge'] = 'PASS; independently authored audit still not performed'
-        record['status'] = 'ALGEBRAIC_CRITERION_COMPILED_AND_AXIOMS_AUDITED'
+        record['status'] = 'FULL_CLASSIFICATION_AND_REGIMES_COMPILED_AND_AXIOMS_AUDITED'
     except Exception as exc:
         record.update(status='FAILED', reason=str(exc))
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -135,7 +148,7 @@ def main():
     print(record['status'])
     if 'reason' in record:
         print(record['reason'])
-    return 0 if record['status'] == 'ALGEBRAIC_CRITERION_COMPILED_AND_AXIOMS_AUDITED' else 1
+    return 0 if record['status'] == 'FULL_CLASSIFICATION_AND_REGIMES_COMPILED_AND_AXIOMS_AUDITED' else 1
 
 
 if __name__ == '__main__':

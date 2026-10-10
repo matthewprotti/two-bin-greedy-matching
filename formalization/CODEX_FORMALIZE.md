@@ -1,4 +1,4 @@
-> Historical development handoff. Phases A and B are complete. The binomial/window part of C and structural source-model parts of C-E are proved; the full probability and continuation bridges remain open. See README.md and SCOPE.md.
+> Historical development handoff; retained as task history, not current instructions or status. All mathematical phases are complete in the full classification release of 10 October 2026. Independent human statement correspondence review remains outstanding. See README.md and SCOPE.md.
 
 # Codex task: compile, complete, and audit the two-bin formalization
 
