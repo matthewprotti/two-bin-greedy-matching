@@ -1,28 +1,26 @@
 {
-  "schema": "two-bin-formalization-status.v2",
-  "date": "2026-10-09",
+  "schema": "two-bin-formalization-status.v4",
+  "date": "2026-10-10",
   "compiler_status": "Lean 4.19.0; commit 6caaee842e94; arm64 macOS",
-  "build": "PASS_PARTIAL_LIBRARY",
-  "axiom_audit": "PASS_27_NAMED_THEOREMS_STANDARD_AXIOMS_ONLY",
-  "negative_controls": "PASS_3_FALSE_CLAIMS_REJECTED",
-  "source_statement_audit": "NOT_RUN",
-  "paired_factorial_sufficiency": "OPEN_FORMALIZATION_TASK",
-  "source_model_bridges": "OPEN_FORMALIZATION_TASK",
-  "full_classification": "NOT_PROVED_IN_LEAN",
-  "draft_source_only": false,
+  "build": "FULL_CLASSIFICATION_AND_REGIMES_COMPILED_AND_AXIOMS_AUDITED",
+  "axiom_audit": "PASS_272_NAMED_THEOREMS_STANDARD_AXIOMS_ONLY",
+  "negative_controls": "PASS_7_FALSE_CLAIMS_REJECTED",
+  "source_statement_independent_audit": "NOT_RUN",
+  "full_classification": "PROVED: TwoBin.full_classification",
+  "four_regimes": "PROVED: TwoBin.four_regimes",
+  "source_model_bridges": "PROVED_FROM_ORIGINAL_SOURCE_COUNTS",
+  "fixed_witness_identity": "PROVED: TwoBin.fixedWitness_closed_formula",
+  "uniform_witness_identity": "PROVED: TwoBin.uniformWitness_closed_formula",
+  "literal_release_contracts": "PASS: FullChallenge.lean; project-authored, not independent expert review",
+  "model_lock": "Original Definitions.lean and SourceModel.lean pinned to fa1f8d8483f11526ea32f90d14fc243f25245560",
   "toolchain": "leanprover/lean4:v4.19.0",
   "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
-  "completed_evidence": [
-    "Historical Python fresh-copy replay",
-    "Partial Lean library compilation and trust-zero re-elaboration",
-    "All 27 named theorem axiom reports",
-    "Positive control imports plus three false-claim rejections",
-    "Actual Lean source model versus separate Python oracle: 16032 fixed and 16032 labeled-random-arrival tails"
-  ],
-  "prohibited_labels": [
-    "Lean-verified",
-    "Lean-checked for the full theorem",
-    "end-to-end formalized"
-  ],
-  "source_model_checks": "PASS_32064_EXACT_TAIL_COMPARISONS; finite bounds in evidence/source-model-check.json"
+  "source_model_checks": "PASS; bounded scope in evidence/source-model-check.json",
+  "appropriate_label": "End-to-end Lean-checked; independent human statement correspondence review outstanding",
+  "prohibited_claims": [
+    "Independent expert review completed",
+    "Peer reviewed",
+    "Novelty or priority cleared",
+    "VibeMathed Lean-verified status established"
+  ]
 }

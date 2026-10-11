@@ -1,41 +1,52 @@
-# Lean: checked supporting library, incomplete classification
+# Lean: full matching classification and all four regimes
 
-Lean 4.19.0 compiles the supporting library. All **27 named theorems** are re-elaborated with `--trust=0` and have printed axiom dependencies contained in `{propext, Classical.choice, Quot.sound}`. The finite `decide` examples use no axioms. Three false claims fail at the intended source lines after positive import/control checks succeed.
+Lean 4.19.0 checks the complete capacity criterion for the original literal process, for both fixed degree words and independent uniform labeled arrival orders:
 
-**Neither `PairedClassificationTarget` nor `FullClassificationTarget` has a proof.** They are definitions of the desired propositions. A green build cannot upgrade either one into a checked theorem. See [SCOPE.md](SCOPE.md) and [STATUS.json](STATUS.json).
+```text
+TwoBin.full_classification : FullClassificationTarget
+TwoBin.four_regimes : FourRegimeTarget
+```
 
-## Pinned environment
+For every positive integer `a <= b`, universal RANDOM-VERTEX stochastic dominance holds exactly when `(b-a)^2 <= a+b-2`. The second theorem covers universal equality, universal RANKING dominance, universal RANDOM-VERTEX dominance, and absence of either universal ordering, with strict examples in both arrival models. The actual fixed and uniform-arrival witness probabilities equal paper equations (17) and (23).
 
-- Lean: `leanprover/lean4:v4.19.0`, compiler commit `6caaee842e94`.
-- Mathlib: `c44e0c8ee63ca166450922a373c7409c5d26b00b`.
-- Transitive dependency revisions: [lake-manifest.json](lake-manifest.json).
-- Successful audit receipt: [../evidence/lean-audit.json](../evidence/lean-audit.json).
-- Historical failed preflight: [../evidence/lean_NOT_RUN.json](../evidence/lean_NOT_RUN.json); it describes the earlier runtime, not this checked build.
+All **272 named theorems** are re-elaborated with `--trust=0`; printed dependencies are contained in `{propext, Classical.choice, Quot.sound}`. Seven false controls fail at their intended claims. There are no admitted results, added axioms, native decision procedures, or checker bypasses. This is **end-to-end Lean-checked, with independent human statement correspondence review still outstanding**.
 
-## Commands
+## Proof organization
 
-From this directory, with Lean/lake on PATH:
+- `Product`, `Symmetric`, `Paired`, `Binomial`, `Window`: product-ratio induction, exact even/odd secant recurrence, paired-factorial equivalence, zero-support binomial conversion, and survival-formula comparison.
+- `SourceBridge`, `FiniteProbability`, `ChoiceDistribution`, `SurvivalDistribution`: the original fair-coin process, finite expectations, unconstrained binomial law, and identification of actual no-saturation probabilities with the formulas.
+- `Continuation`, `TailExpansion`: common continuation after saturation, nonnegative continuation gains, and the exact finite prefix expansion of actual matching tails. `source_tail_expansion` proves the identity from the source process; it does not assume the desired identity. This yields fixed-order sufficiency.
+- `WordStatistics`, `Insertion`: labeled-permutation correspondence, distinct label permutations, repeated-degree multiplicities, and exact two-flexible insertion counts.
+- `AllMatched`, `GapFormula`, `FixedWitness`, `WitnessExpansion`, `UniformAlgebra`, `UniformWitness`, `WitnessIdentities`: both necessity proofs, parity and denominator boundaries, weighted finite sums, the full classification, and the two closed witness identities.
+- `UnitReverse`, `StrictRV`, `StrictRandom`, `Regimes`, `FourRegimes`: reverse dominance, equality boundaries, strict examples, and all four regimes.
+
+The continuation proof uses exact finite expectations and a prefix-gain decomposition. Zero-degree jobs contribute zero gain; prefix positive-job counts and the raw arrival index are kept distinct. This avoids conditioning on events of probability zero. Empty words, never-filled paths, dummy coins, boundary capacities, and zero-support terms are included. The formal proof organization differs from the exposition without changing the target.
+
+## Statement correspondence and frozen definitions
+
+[FullChallengeStatement.lean](FullChallengeStatement.lean) expands the capacity, dominance, reverse-dominance, and equality claims using only the original source definitions. [FullChallenge.lean](FullChallenge.lean) proves those literal contracts. The earlier Mathlib-only algebraic challenge remains checked. These are project-authored machine-checked correspondence artifacts, **not an independent expert audit**.
+
+`Definitions.lean` and `SourceModel.lean` are byte-for-byte unchanged from publication commit `fa1f8d8483f11526ea32f90d14fc243f25245560`, enforced by [MODEL_LOCK.json](MODEL_LOCK.json). Historical comments calling a statement an unproved target are retained in those frozen files; its proof is now in `UniformWitness.lean`. The model retains one persistent RK priority, independent per-job coins (including unused coins), and the multiplicity of labeled arrivals with repeated degrees.
+
+## Reproduction
+
+Pinned Lean: `leanprover/lean4:v4.19.0`, commit `6caaee842e94`. Mathlib: `c44e0c8ee63ca166450922a373c7409c5d26b00b`; transitive revisions are in `lake-manifest.json`.
 
 ```sh
+cd formalization
 MATHLIB_NO_CACHE_ON_UPDATE=1 lake update
-lake exe cache get TwoBin/Definitions.lean
-python3 -B build_and_audit.py --receipt /tmp/two-bin-lean-audit-new.json
+lake exe cache get TwoBin.lean
+python3 -B build_and_audit.py --receipt /tmp/two-bin-full-audit-new.json
+cd ..
+python3 -B scripts/check_source_model.py --receipt /tmp/two-bin-source-check-new.json
 ```
 
-On the macOS 26.4.1 host used for preparation, the old toolchain's compiled cache downloader failed with a Mach-O `SG_READ_ONLY` error. Running the same pinned Mathlib cache code with Lean's interpreter succeeded:
+Receipts must use new paths outside the repository. On the preparation host (macOS 26.4.1), the compiled cache downloader failed a Mach-O `SG_READ_ONLY` check. The same pinned cache code runs through Lean's interpreter:
 
 ```sh
-lake env lean --run .lake/packages/mathlib/Cache/Main.lean get TwoBin/Definitions.lean
+lake env lean --run .lake/packages/mathlib/Cache/Main.lean get TwoBin.lean
 ```
 
-This is a dependency-download workaround, not a proof-checker bypass. The Lean kernel, version, and theorem statements are unchanged.
+This only changes dependency download execution. The [audit receipt](../evidence/lean-audit.json) binds source and dependency hashes, compiler output, every theorem's axioms, literal challenges, model lock, and seven false controls. Historical 27- and 83-theorem receipts remain as `lean-audit-phase-a.json` and `lean-audit-algebraic.json`.
 
-## Source repairs and audit controls
-
-The supplied `falling_add` induction did not compile: simplification left a `Nat.add` expression that the induction hypothesis did not rewrite. An explicit `change` and rewrite repair that proof without weakening its statement. The broad `import Mathlib` was replaced by the required modules to limit the download/build dependency set.
-
-The audit now covers every named theorem, scans for forbidden proof/trust constructs, checks positive counterparts, and requires each negative control to fail at the intended claim. It no longer accepts arbitrary nonzero exits as successful false controls. The audit receipt binds the source, dependency manifest, and audit script hashes.
-
-The finite source-model check uses the actual `coinWords`, `step`, `accepted`, tail counts, and `arrivalOrders` definitions, compared against the separate literal Python implementation. It includes empty words, zero-degree jobs, repeated degrees, swapped capacities, thresholds zero and above word length, and labeled-permutation multiplicities. This does not replace a universal correspondence proof.
-
-The original [CODEX_FORMALIZE.md](CODEX_FORMALIZE.md) remains the development roadmap. Its remaining phases require substantive new proofs, not just compilation repairs. Do not advertise the full result as Lean-checked or Lean-verified.
+The separate executable crosscheck covers 32,064 matching tails, 16,032 additional recursive-kernel agreements, 2,904 survival comparisons, and 14 witness gaps against the historical Python implementations. These bounded tests supplement the universal proofs.

@@ -3,3 +3,9 @@ import TwoBin.Secant
 import TwoBin.Witness
 import TwoBin.FiniteKernel
 import TwoBin.SourceModel
+import TwoBin.Paired
+import TwoBin.Binomial
+import TwoBin.Window
+import TwoBin.SourceBridge
+import TwoBin.FourRegimes
+import TwoBin.WitnessIdentities

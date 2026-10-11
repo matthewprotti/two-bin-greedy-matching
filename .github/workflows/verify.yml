@@ -26,9 +26,9 @@ jobs:
       - name: Fetch pinned dependencies and the required Mathlib cache
         working-directory: formalization
         run: |
-          lake exe cache get TwoBin/Definitions.lean
+          lake exe cache get TwoBin.lean
           git diff --exit-code -- lake-manifest.json lean-toolchain lakefile.toml
-      - name: Compile partial library, audit all axioms and reject false claims
+      - name: Compile full classification, audit all axioms and reject false claims
         run: python3 -B formalization/build_and_audit.py --receipt "$RUNNER_TEMP/lean-audit.json"
       - name: Compare actual Lean source counts with the separate Python oracle
         run: python3 -B scripts/check_source_model.py --receipt "$RUNNER_TEMP/source-model-check.json"

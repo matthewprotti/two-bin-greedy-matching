@@ -1,25 +1,59 @@
 {
-  "schema": "two-bin-lean-build.v2",
+  "schema": "two-bin-lean-build.v4",
   "source_sha256": {
-    "AxiomAudit.lean": "ef6803d30a36abffba9f99fa7b845b1a24c46c844c8635ceeb6669af8e41be07",
-    "PositiveControls.lean": "93e19c82d043f90af78e20ce2d65dfd3715376fb9759a199b9f01c78a13dd3a0",
+    "AlgebraicChallenge.lean": "900f14bf8c1723cf0a0685979f65289fc650d4bac2a5cb48d17e7908e85f0968",
+    "AxiomAudit.lean": "5207630a387438b43d0b7b91b21c574cf8f1c1d90d781a2f4fdabd968b6d1855",
+    "ChallengeStatement.lean": "e339a4790b76c57d63e640445b39fb58cfff9f7f44f43e76ed4272d1995adeab",
+    "FullChallenge.lean": "71dbed6d85404d857327cbde1edf52ec9d09ca228bc93ca9bd10c32071836687",
+    "FullChallengeStatement.lean": "b0c510c807e845e94bada3dc65f5712644e3fa0d4cc974b86258ef7c73be99d1",
+    "MODEL_LOCK.json": "16a03f69f93bd726c291dc22345c68902ebce760f21a95b4f79cdc5a5e0eca40",
+    "PositiveControls.lean": "771638a14b14ce6108acfcc67dbe118546a0c789964e4980a9eceb2bd2751eae",
+    "TwoBin/AllMatched.lean": "8957ff9aeb16cd2b71bd933d89b845f02a418942bddf51dfae899fe9338fcee7",
+    "TwoBin/Binomial.lean": "50b6a8844caa0f229162f49f630ab503cee18f79d5ce87fd258052078d89c345",
+    "TwoBin/ChoiceDistribution.lean": "f3f78c30b338709b70eeba59b51a81a014df52451030b6e6e924e05234d86eda",
+    "TwoBin/Continuation.lean": "b70a7cdc83e3f609671c680a1e8757f0a37b28cfb459d00701e2bff716139d6a",
     "TwoBin/Definitions.lean": "162aca3f6f95c0b6a7ed9865af9c0d2a864b18c067161c70afc065167a2cdcb8",
     "TwoBin/Falling.lean": "33f0d0291bb32cd5ed052b55c41a4f72b6541ed2f4de83d8011a00e5acf06a70",
     "TwoBin/FiniteKernel.lean": "bd8060596fe623d9d215f0c48adac35bee208611bcad69bdcb6585ba5b1fa112",
-    "TwoBin/Secant.lean": "33a584f399864da677db38e7032a4aca485e3e078b782c92a66e79f9a09393b4",
+    "TwoBin/FiniteProbability.lean": "b7ecf529f2dcd611aa8456a51740fb544b2a9316f39946a1497c35579379dede",
+    "TwoBin/FixedWitness.lean": "c04e9f98ebca6a69d095b97b5b11fe6aedb79d59358ccf28ea2eeb8041118a27",
+    "TwoBin/FourRegimes.lean": "7f0b3a3f519df298dd0b0e53843667bad7c8ff5ced74fcaf88cd939baeab1e43",
+    "TwoBin/GapFormula.lean": "8bc90ac73567f55f39acbadee7a5cfac018361a56cdb722c6e24eab8141d6bdc",
+    "TwoBin/Insertion.lean": "126de7a6dd28e15f3cd7b483c63f20a5a33cfd44145a5367108349a932f093a4",
+    "TwoBin/Paired.lean": "5318983782821502e560f6ff4d304871931bee019085cf445a9cb36c6f43d657",
+    "TwoBin/Product.lean": "0907f3e097f5c6e87b40e6f84539318dce09af87cd8874408337d84ec92e7972",
+    "TwoBin/Regimes.lean": "e0b4a4ab9a1088c6ebb101783a79eff191021b538b971d28596ac5f045e03f6a",
+    "TwoBin/Secant.lean": "3cf525a01f62db73bb1013df380e66fe3b8299916d7cd6b5adbdf815212fc8a3",
+    "TwoBin/SourceBridge.lean": "56150a43ee10356801710b0c2ecc4c63ee294055f5a24bb9d2da08040d4b5e68",
     "TwoBin/SourceModel.lean": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961",
+    "TwoBin/StrictRV.lean": "e65d1fe9c53a3e10e5825f72a16d6843c36ccbdb6048f93c5936365df92a8a53",
+    "TwoBin/StrictRandom.lean": "befb8449d07f876e33a51486df5eb3cc775ce83c71a7a1aad15f91dacf38257b",
+    "TwoBin/SurvivalDistribution.lean": "1c43ef4914276687ecaeca045d7e32514441dc9c49e0b9f63497b9626d4b7180",
+    "TwoBin/Symmetric.lean": "ac32bba936512f2a3b1b33681bea1bcb798ed2db93cd0fbacbe2b79a52032f80",
+    "TwoBin/TailExpansion.lean": "6f1da7669d4bd43da582aecdcb07f9015799d7e343e734ccc9c13a489fbb497c",
+    "TwoBin/UniformAlgebra.lean": "41c5047a58bf08ff8c68cd2c3e2ee9439b3e1272cb90a7a9582b13c0fde60a62",
+    "TwoBin/UniformWitness.lean": "a5b5f93d74951672fae93bd774b065a99189b33fa1f09f2693dbcc5fa34fa903",
+    "TwoBin/UnitReverse.lean": "2bdec3e82faf22162dc95f51b517827467f44aadbc86efb44c5a414c36f943a7",
+    "TwoBin/Window.lean": "76a3a4a2584b431455c79989aacc9614ab5852ceba141bcf0774f8b7c371ccc5",
     "TwoBin/Witness.lean": "7306015d07cbabe116e68b154f4682d8050cc9cda67317d97dd66cf7ad94b947",
-    "TwoBin.lean": "f20ec6341a125a1a2aafe387caeaa508599039b64e8536343c38b165b42ae319",
-    "build_and_audit.py": "5bec24f26080587049fd3ce36a28623f23aa7bb927a2859f4101e2552a02386e",
+    "TwoBin/WitnessExpansion.lean": "a980a25160816fdc6adb8c07b40aabaa85ae1332dda0e8930e4aaee588ee73de",
+    "TwoBin/WitnessIdentities.lean": "b32c26fb8ba87ac08353ba0eac700b7bae91806faa66fc70a987d802a9474051",
+    "TwoBin/WordStatistics.lean": "41029b36687e44096abf27573c260b2f937e157509061c51804f52c830ef7018",
+    "TwoBin.lean": "d6f10b44c8240e63f225d35ac0aa116c9ddbf715e243db10f1061cc39e87b6ed",
+    "build_and_audit.py": "def32201974a90b96dd1ba14ba36d6848be197b1e3bd30e5021b61b1ae7fa22e",
     "lake-manifest.json": "952c0b5891220c95bdf1716a9ff2517fde70ad9014cf0c205e042d127b9dde47",
-    "lakefile.toml": "0ae59e330094c4afa161460cd92f50381834bbd39131210e4926b991b3cc1b88",
+    "lakefile.toml": "88b76a5e258fc32da1b280e2f4dee6c7eeea4bb0a372bda3f5940bbd9ac34490",
     "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "negative/FalseEquality.lean": "d006ca47b578aefecd97d73b3b53a008db053abd0616c5b8ca0cafced05b324d",
+    "negative/FalseFixedDominance.lean": "8d124f12c89af8f4e174f4747637f5dad2518ca3d139c01a974f70f8761a00e9",
     "negative/FalseNumeric.lean": "7bea151e0bfa4c3d5529b871ac6f9e6956458be6c9a0df4471019f5b5fb467f4",
+    "negative/FalsePairedBound.lean": "6795ca3eedd72e44af4b56c11c1e25e2fff7f5aee2a21f02d62a23b08c4b34fc",
     "negative/FalseQuadratic.lean": "3e562ec0b8f69fb4d6b77b8ddda527ba7b5de929c1405ea7cab83ef3aca2ccd7",
+    "negative/FalseRandomDominance.lean": "ae5f63406683f26c1c9a3c42357d57d1ccc21765420e19319446c2b852b64926",
     "negative/FalseRankingNumerator.lean": "f8be6ae78f3cc07f26b5af662570e5856b1cb73fce11f1f99f08075347edbf2f"
   },
-  "full_classification": "NOT_PROVED_IN_LEAN",
-  "paired_sufficiency": "NOT_PROVED_IN_LEAN",
+  "full_classification": "PROVED: TwoBin.full_classification",
+  "paired_sufficiency": "PROVED_AND_AXIOMS_AUDITED",
   "source_statement_independent_audit": "NOT_RUN",
   "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
   "steps": [
@@ -32,7 +66,7 @@
       ],
       "returncode": 0,
       "output": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)\n",
-      "seconds": 2.051
+      "seconds": 1.835
     },
     {
       "command": [
@@ -40,8 +74,56 @@
         "build"
       ],
       "returncode": 0,
-      "output": "\u2714 [839/846] Built TwoBin.Definitions\n\u2714 [840/846] Built TwoBin.FiniteKernel\n\u2714 [841/846] Built TwoBin.SourceModel\n\u2714 [842/846] Built TwoBin.Witness\n\u2714 [843/846] Built TwoBin.Falling\n\u2714 [844/846] Built TwoBin.Secant\n\u2714 [845/846] Built TwoBin\nBuild completed successfully.\n",
-      "seconds": 9.065
+      "output": "\u2139 [1142/1146] Replayed AlgebraicChallenge\ninfo: ././././AlgebraicChallenge.lean:18:0: 'TwoBinChallenge.release_matches_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n\u2139 [1145/1146] Replayed FullChallenge\ninfo: ././././FullChallenge.lean:16:0: 'TwoBin.full_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: ././././FullChallenge.lean:17:0: 'TwoBin.four_regimes' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: ././././FullChallenge.lean:18:0: 'TwoBinChallenge.release_matches_full_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\ninfo: ././././FullChallenge.lean:19:0: 'TwoBinChallenge.regimes_match_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\nBuild completed successfully.\n",
+      "seconds": 0.861
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/AllMatched.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 5.56
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Binomial.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.807
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/ChoiceDistribution.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.707
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Continuation.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 4.54
     },
     {
       "command": [
@@ -53,7 +135,7 @@
       ],
       "returncode": 0,
       "output": "",
-      "seconds": 2.256
+      "seconds": 1.471
     },
     {
       "command": [
@@ -65,31 +147,7 @@
       ],
       "returncode": 0,
       "output": "",
-      "seconds": 2.271
-    },
-    {
-      "command": [
-        "lake",
-        "env",
-        "lean",
-        "--trust=0",
-        "TwoBin/Secant.lean"
-      ],
-      "returncode": 0,
-      "output": "",
-      "seconds": 1.963
-    },
-    {
-      "command": [
-        "lake",
-        "env",
-        "lean",
-        "--trust=0",
-        "TwoBin/Witness.lean"
-      ],
-      "returncode": 0,
-      "output": "",
-      "seconds": 2.095
+      "seconds": 1.568
     },
     {
       "command": [
@@ -101,7 +159,127 @@
       ],
       "returncode": 0,
       "output": "",
-      "seconds": 1.753
+      "seconds": 1.351
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/FiniteProbability.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.616
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/FixedWitness.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.541
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/FourRegimes.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.491
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/GapFormula.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.216
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Insertion.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.902
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Paired.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 3.476
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Product.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.376
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Regimes.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.872
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Secant.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.695
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/SourceBridge.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.472
     },
     {
       "command": [
@@ -113,7 +291,211 @@
       ],
       "returncode": 0,
       "output": "",
-      "seconds": 1.815
+      "seconds": 1.43
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/StrictRV.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.253
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/StrictRandom.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.542
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/SurvivalDistribution.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.063
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Symmetric.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.812
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/TailExpansion.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.895
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/UniformAlgebra.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 3.143
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/UniformWitness.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.804
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/UnitReverse.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.797
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Window.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.989
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/Witness.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.534
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/WitnessExpansion.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.841
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/WitnessIdentities.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 2.226
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "TwoBin/WordStatistics.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.56
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "ChallengeStatement.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.269
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "AlgebraicChallenge.lean"
+      ],
+      "returncode": 0,
+      "output": "'TwoBinChallenge.release_matches_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "seconds": 1.393
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "FullChallengeStatement.lean"
+      ],
+      "returncode": 0,
+      "output": "",
+      "seconds": 1.332
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "FullChallenge.lean"
+      ],
+      "returncode": 0,
+      "output": "'TwoBin.full_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.four_regimes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBinChallenge.release_matches_full_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBinChallenge.regimes_match_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "seconds": 2.193
     },
     {
       "command": [
@@ -124,8 +506,8 @@
         "AxiomAudit.lean"
       ],
       "returncode": 0,
-      "output": "'TwoBin.falling_zero' does not depend on any axioms\n'TwoBin.falling_one' depends on axioms: [propext]\n'TwoBin.falling_two' depends on axioms: [propext]\n'TwoBin.falling_add' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_zero_of_lt' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_nat_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_nat_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_axis' depends on axioms: [propext]\n'TwoBin.paired_implies_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.gap_form' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_identity' depends on axioms: [propext, Quot.sound]\n'TwoBin.adjacent_nat_product_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailExpansion_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tail_comparison_from_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.clipped_continuation_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.mixture_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.oddSlope_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.combine_product_secant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.reversal_rv_count' does not depend on any axioms\n'TwoBin.reversal_rk_count' does not depend on any axioms\n'TwoBin.adjacent_rv_count' does not depend on any axioms\n'TwoBin.adjacent_rk_count' does not depend on any axioms\n'TwoBin.witness_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_polynomial_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_witness_expression_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-      "seconds": 2.373
+      "output": "'TwoBin.continuationKernel_too_few' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationKernel_all_matched' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationGain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationGain_flexible' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationGain_all_matched' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.matchingGap_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_nil' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.matchingGap_counts' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.matchingGap_nonnegative_of_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_negative' depends on axioms: [propext, Quot.sound]\n'TwoBin.binomialZ_above' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_nat_eq_descFactorial' depends on axioms: [propext, Quot.sound]\n'TwoBin.fallingRat_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fallingRat_zero_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomial_factorial_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_binomial_shift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.forcedChoices_rv' depends on axioms: [propext]\n'TwoBin.forcedChoices_rank1' depends on axioms: [propext]\n'TwoBin.activeTrials_split' depends on axioms: [propext]\n'TwoBin.freeStep_first' depends on axioms: [propext]\n'TwoBin.runFree_first' depends on axioms: [propext]\n'TwoBin.freeFirstMass_nil' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.freeFirstMass_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialMass_pascal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_zero_trials' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.freeFirstMass_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationKernel_clamp' depends on axioms: [propext, Quot.sound]\n'TwoBin.continuationKernel_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.step_valid' depends on axioms: [propext, Quot.sound]\n'TwoBin.step_not_unsaturated' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.step_total_unsaturated' depends on axioms: [propext, Quot.sound]\n'TwoBin.step_total_flexible' depends on axioms: [propext, Quot.sound]\n'TwoBin.singleton_totals_first_full' depends on axioms: [propext, Quot.sound]\n'TwoBin.singleton_totals_second_full' depends on axioms: [propext, Quot.sound]\n'TwoBin.saturated_continuation_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailKernel_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.continuationGain_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_zero' does not depend on any axioms\n'TwoBin.falling_one' depends on axioms: [propext]\n'TwoBin.falling_two' depends on axioms: [propext]\n'TwoBin.falling_add' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_zero_of_lt' depends on axioms: [propext, Quot.sound]\n'TwoBin.falling_nat_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_nat_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_axis' depends on axioms: [propext]\n'TwoBin.paired_implies_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.gap_form' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_identity' depends on axioms: [propext, Quot.sound]\n'TwoBin.adjacent_nat_product_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_step_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailExpansion_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tail_comparison_from_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.clipped_continuation_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.mixture_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_succ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_congr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_add' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_const' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sum_indicator_eq_filter_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailKernel_source' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailKernel_rvCount' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailKernel_rkCount' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_mul_const' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_div' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.activeTrials_singletons' depends on axioms: [propext]\n'TwoBin.forcedChoices_singletons' depends on axioms: [propext]\n'TwoBin.prefixGap_leading_singletons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_flexible' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixedWitness_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixedWitness_gap_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_implies_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_strict_rv_of_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_strict_rv_of_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_strict_rk_outside' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_strict_rk_outside' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.four_regimes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.ranking_last_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalGap_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalGap_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.excluded_total_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.twoFlexCoefficient_boundary_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.insertAt_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.insertEverywhere_range' depends on axioms: [propext, Quot.sound]\n'TwoBin.insertAt_mem' depends on axioms: [propext]\n'TwoBin.positiveWord_insertAt' depends on axioms: [propext]\n'TwoBin.forcedChoices_cons_flex' depends on axioms: [propext]\n'TwoBin.forcedChoices_insertAt_take' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.forcedChoices_take_le' depends on axioms: [propext, Quot.sound]\n'TwoBin.forcedChoices_take_zero' depends on axioms: [propext, Quot.sound]\n'TwoBin.forcedChoices_insertAt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.twiceInserted_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.twiceInserted_positive' depends on axioms: [propext]\n'TwoBin.twiceInserted_flexible_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.twiceInserted_prefix_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.list_sum_map_flatMap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.list_sum_map_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.insertEverywhere_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.arrivalOrders_replicate' depends on axioms: [propext, Quot.sound]\n'TwoBin.arrivalOrders_replicate_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.arrivalOrders_two_flexible_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_interior' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.quadratic_implies_paired' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.gap_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.gap_interior_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.interior_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.product_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.falling_add_le_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.paired_large_left' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_reverse_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_reverse_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.unit_region_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_equality_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_equality_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.no_universal_order_outside' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.full_regime_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.oddSlope_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.combine_product_secant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinWords_length' depends on axioms: [propext]\n'TwoBin.coinWords_mem_length' depends on axioms: [propext, Quot.sound]\n'TwoBin.insertEverywhere_length' depends on axioms: [propext]\n'TwoBin.insertEverywhere_mem_length' depends on axioms: [propext, Quot.sound]\n'TwoBin.arrivalOrders_mem_length' depends on axioms: [propext, Quot.sound]\n'TwoBin.flatMap_length_constant' depends on axioms: [propext]\n'TwoBin.arrivalOrders_length' depends on axioms: [propext, Quot.sound]\n'TwoBin.fixedDominance_implies_randomOrderDominance' depends on axioms: [propext, Quot.sound]\n'TwoBin.step_loads_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.freeStep_loads_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.step_unsaturated_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.step_eq_free_of_unsaturated' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.runActual_loads_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.runFree_loads_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.run_unsaturated_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.run_eq_free_of_unsaturated' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.firstSaturationIndex_none_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.firstSaturationIndex_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.truncatedFirstSaturation_le_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalCount_eq_free' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalCount_eq_no_saturation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.reversal_rv_count' does not depend on any axioms\n'TwoBin.reversal_rk_count' does not depend on any axioms\n'TwoBin.adjacent_rv_count' does not depend on any axioms\n'TwoBin.adjacent_rk_count' does not depend on any axioms\n'TwoBin.activeTrials_flexes' depends on axioms: [propext]\n'TwoBin.forcedChoices_flexes' depends on axioms: [propext, Quot.sound]\n'TwoBin.binomialWindow_zero_trials' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_general' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.ranking_flexes_first' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.ranking_flexes_second' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rv_flexes_survival' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalGap_flexes_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_leading_flexibles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.strictRVWitness_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.strictRVWitness_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.not_fixed_reverse_of_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_one_of_short' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sourceSurvivalGap_short' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_all_flexes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.insertAt_singleton_flexes' depends on axioms: [propext, Quot.sound]\n'TwoBin.matchingGap_singleton_position' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.arrivalOrders_one_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.strictRV_random_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.not_random_reverse_of_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.freeStep_total' depends on axioms: [propext, Quot.sound]\n'TwoBin.runFree_total' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.activeTrials_single_le_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.window_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_sum_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.free_interval_probability' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.unsaturated_free_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_average' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rv_survival_formula' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.ranking_survival_formula' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.source_survival_dominance' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fallingRat_int' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fallingRat_nat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.midpointParts_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.midpointParts_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.midpointParts_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.symmetric_secant_rat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.symmetric_secant_int' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.runActual_valid' depends on axioms: [propext, Quot.sound]\n'TwoBin.unsaturated_actual_total' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.zip_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.runActual_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.coinAverage_next_state' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.tailKernel_reward_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.average_prefix_gain' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rewardKernel_prefix_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.source_tail_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixExpansion_dominance' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_sufficiency' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.capacityRegion_succ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.capacityRegion_implies_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.hockey_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.choose_two_product' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_nat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weighted_hockey' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weightedCoefficientSum_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.choose_raise_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.choose_raise_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.choose_raise_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weighted_first_term' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weighted_second_term' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witnessBracket_formula' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weightedCoefficientSum_closed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.excluded_parity_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.weightedCoefficientSum_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sum_matchingGap_counts' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.randomMatchingGap_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sum_range_lt_const' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.sum_insertion_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.uniformWitness_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.uniformWitness_gap_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_implies_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.full_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_unit_mass' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalProbability_zero_of_too_long' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.unit_survival_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixExpansion_unit_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_reverse_unit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixed_reverse_implies_random_reverse' depends on axioms: [propext, Quot.sound]\n'TwoBin.matchingGap_nonpositive_of_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.randomMatchingGap_nonpositive_of_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_pascal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialZ_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialWindow_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialWindow_shift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialWindow_pascal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.binomialWindow_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rankingSurvivalFormula_step' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rankingSurvivalFormula_le_succ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.rankingSurvivalFormula_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.pure_singleton_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.survivalFormula_dominance' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_polynomial_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witness_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.random_witness_expression_negative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.two_flex_contribution' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.prefixGap_two_profile' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.witnessSum_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.matchingGap_two_profile' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.factorial_pred_rat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.twoFlexCoefficient_boundary_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.fixedWitness_closed_formula' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.uniformWitness_closed_formula' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.activeTrials_append' depends on axioms: [propext, Quot.sound]\n'TwoBin.forcedChoices_append' depends on axioms: [propext]\n'TwoBin.forcedChoices_nonnegative' depends on axioms: [propext, Quot.sound]\n'TwoBin.activeTrials_positive' depends on axioms: [propext]\n'TwoBin.activeTrials_le_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBin.positiveWord_append' depends on axioms: [propext, Quot.sound]\n'TwoBin.positiveWord_take' does not depend on any axioms\n'TwoBin.positiveWord_drop' depends on axioms: [propext]\n'TwoBin.insertEverywhere_eq_permutationsAux' depends on axioms: [propext]\n'TwoBin.arrivalOrders_eq_permutations' depends on axioms: [propext, Quot.sound]\n'TwoBin.arrivalOrders_labeled' depends on axioms: [propext, Quot.sound]\n'TwoBin.arrivalOrders_labeled_indices' depends on axioms: [propext, Quot.sound]\n'TwoBin.labeled_arrival_orders_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBinChallenge.release_matches_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBinChallenge.release_matches_full_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'TwoBinChallenge.regimes_match_literal_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "seconds": 13.834
     },
     {
       "command": [
@@ -137,7 +519,7 @@
       ],
       "returncode": 0,
       "output": "",
-      "seconds": 1.822
+      "seconds": 1.645
     },
     {
       "command": [
@@ -149,7 +531,7 @@
       ],
       "returncode": 1,
       "output": "negative/FalseNumeric.lean:3:76: error: tactic 'decide' proved that the proposition\n  TwoBin.rvCount 1 3 [TwoBin.Degree.flexible, TwoBin.Degree.flexible, TwoBin.Degree.singleton] 3 = 6\nis false\n",
-      "seconds": 1.714
+      "seconds": 1.418
     },
     {
       "command": [
@@ -161,7 +543,7 @@
       ],
       "returncode": 1,
       "output": "negative/FalseQuadratic.lean:3:39: error: unsolved goals\n\u22a2 False\n",
-      "seconds": 1.689
+      "seconds": 1.447
     },
     {
       "command": [
@@ -173,10 +555,104 @@
       ],
       "returncode": 1,
       "output": "negative/FalseRankingNumerator.lean:3:77: error: tactic 'decide' proved that the proposition\n  TwoBin.rkCount 1 3 [TwoBin.Degree.flexible, TwoBin.Degree.flexible, TwoBin.Degree.singleton] 3 = 10\nis false\n",
-      "seconds": 1.691
+      "seconds": 1.416
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalsePairedBound.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalsePairedBound.lean:3:87: error: unsolved goals\n\u22a2 False\n",
+      "seconds": 1.419
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseFixedDominance.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseFixedDominance.lean:3:102: error: unsolved goals\n\u22a2 False\n",
+      "seconds": 1.465
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseRandomDominance.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseRandomDominance.lean:3:108: error: unsolved goals\n\u22a2 False\n",
+      "seconds": 1.426
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "negative/FalseEquality.lean"
+      ],
+      "returncode": 1,
+      "output": "negative/FalseEquality.lean:3:110: error: unsolved goals\n\u22a2 False\n",
+      "seconds": 1.429
     }
   ],
+  "model_lock": {
+    "schema": "two-bin-model-lock.v1",
+    "baseline_commit": "fa1f8d8483f11526ea32f90d14fc243f25245560",
+    "files": {
+      "TwoBin/Definitions.lean": "162aca3f6f95c0b6a7ed9865af9c0d2a864b18c067161c70afc065167a2cdcb8",
+      "TwoBin/SourceModel.lean": "048dd171661a8b46b70eaa1b3a374900f66abef4da673e2c4627d66d6abe0961"
+    }
+  },
   "audited_theorems": [
+    "TwoBin.continuationKernel_too_few",
+    "TwoBin.continuationKernel_all_matched",
+    "TwoBin.continuationGain_zero",
+    "TwoBin.continuationGain_flexible",
+    "TwoBin.continuationGain_all_matched",
+    "TwoBin.matchingGap_prefix",
+    "TwoBin.prefixGap_nil",
+    "TwoBin.prefixGap_cons",
+    "TwoBin.matchingGap_counts",
+    "TwoBin.matchingGap_nonnegative_of_fixed",
+    "TwoBin.binomialZ_negative",
+    "TwoBin.binomialZ_above",
+    "TwoBin.falling_nat_eq_descFactorial",
+    "TwoBin.fallingRat_factorial",
+    "TwoBin.fallingRat_zero_of_lt",
+    "TwoBin.binomial_factorial_bridge",
+    "TwoBin.paired_binomial_shift",
+    "TwoBin.forcedChoices_rv",
+    "TwoBin.forcedChoices_rank1",
+    "TwoBin.activeTrials_split",
+    "TwoBin.freeStep_first",
+    "TwoBin.runFree_first",
+    "TwoBin.freeFirstMass_nil",
+    "TwoBin.freeFirstMass_cons",
+    "TwoBin.binomialMass_pascal",
+    "TwoBin.binomialZ_zero_trials",
+    "TwoBin.freeFirstMass_binomial",
+    "TwoBin.continuationKernel_clamp",
+    "TwoBin.continuationKernel_mono",
+    "TwoBin.step_valid",
+    "TwoBin.step_not_unsaturated",
+    "TwoBin.step_total_unsaturated",
+    "TwoBin.step_total_flexible",
+    "TwoBin.singleton_totals_first_full",
+    "TwoBin.singleton_totals_second_full",
+    "TwoBin.saturated_continuation_step",
+    "TwoBin.tailKernel_saturated",
+    "TwoBin.continuationGain_nonnegative",
     "TwoBin.falling_zero",
     "TwoBin.falling_one",
     "TwoBin.falling_two",
@@ -194,18 +670,397 @@
     "TwoBin.tail_comparison_from_identity",
     "TwoBin.clipped_continuation_step",
     "TwoBin.mixture_le",
+    "TwoBin.coinAverage_zero",
+    "TwoBin.coinAverage_succ",
+    "TwoBin.coinAverage_congr",
+    "TwoBin.coinAverage_add",
+    "TwoBin.coinAverage_sub",
+    "TwoBin.coinAverage_const",
+    "TwoBin.coinAverage_nonnegative",
+    "TwoBin.coinAverage_mono",
+    "TwoBin.sum_indicator_eq_filter_length",
+    "TwoBin.tailKernel_source",
+    "TwoBin.tailKernel_rvCount",
+    "TwoBin.tailKernel_rkCount",
+    "TwoBin.coinAverage_mul_const",
+    "TwoBin.coinAverage_div",
+    "TwoBin.coinAverage_snoc",
+    "TwoBin.activeTrials_singletons",
+    "TwoBin.forcedChoices_singletons",
+    "TwoBin.prefixGap_leading_singletons",
+    "TwoBin.prefixGap_flexible",
+    "TwoBin.fixedWitness_gap",
+    "TwoBin.fixedWitness_gap_negative",
+    "TwoBin.fixed_implies_quadratic",
+    "TwoBin.fixed_classification",
+    "TwoBin.fixed_strict_rv_of_two_le",
+    "TwoBin.random_strict_rv_of_two_le",
+    "TwoBin.fixed_strict_rk_outside",
+    "TwoBin.random_strict_rk_outside",
+    "TwoBin.four_regimes",
+    "TwoBin.ranking_last_step",
+    "TwoBin.sourceSurvivalGap_zero",
+    "TwoBin.sourceSurvivalGap_two",
+    "TwoBin.excluded_total_ge_two",
+    "TwoBin.twoFlexCoefficient_boundary_negative",
+    "TwoBin.insertAt_length",
+    "TwoBin.insertEverywhere_range",
+    "TwoBin.insertAt_mem",
+    "TwoBin.positiveWord_insertAt",
+    "TwoBin.forcedChoices_cons_flex",
+    "TwoBin.forcedChoices_insertAt_take",
+    "TwoBin.forcedChoices_take_le",
+    "TwoBin.forcedChoices_take_zero",
+    "TwoBin.forcedChoices_insertAt",
+    "TwoBin.twiceInserted_length",
+    "TwoBin.twiceInserted_positive",
+    "TwoBin.twiceInserted_flexible_count",
+    "TwoBin.twiceInserted_prefix_two",
+    "TwoBin.list_sum_map_flatMap",
+    "TwoBin.list_sum_map_range",
+    "TwoBin.insertEverywhere_sum",
+    "TwoBin.arrivalOrders_replicate",
+    "TwoBin.arrivalOrders_replicate_sum",
+    "TwoBin.arrivalOrders_two_flexible_sum",
+    "TwoBin.paired_interior",
+    "TwoBin.quadratic_implies_paired",
+    "TwoBin.paired_classification",
+    "TwoBin.gap_lower_bound",
+    "TwoBin.gap_interior_lower_bound",
+    "TwoBin.interior_endpoint",
+    "TwoBin.product_ratio_bound",
+    "TwoBin.falling_add_le_mul",
+    "TwoBin.paired_large_left",
+    "TwoBin.fixed_reverse_classification",
+    "TwoBin.random_reverse_classification",
+    "TwoBin.unit_region_iff",
+    "TwoBin.fixed_equality_classification",
+    "TwoBin.random_equality_classification",
+    "TwoBin.no_universal_order_outside",
+    "TwoBin.full_regime_classification",
     "TwoBin.oddSlope_monotone",
     "TwoBin.combine_product_secant",
+    "TwoBin.coinWords_length",
+    "TwoBin.coinWords_mem_length",
+    "TwoBin.insertEverywhere_length",
+    "TwoBin.insertEverywhere_mem_length",
+    "TwoBin.arrivalOrders_mem_length",
+    "TwoBin.flatMap_length_constant",
+    "TwoBin.arrivalOrders_length",
+    "TwoBin.fixedDominance_implies_randomOrderDominance",
+    "TwoBin.step_loads_monotone",
+    "TwoBin.freeStep_loads_monotone",
+    "TwoBin.step_unsaturated_iff",
+    "TwoBin.step_eq_free_of_unsaturated",
+    "TwoBin.runActual_loads_monotone",
+    "TwoBin.runFree_loads_monotone",
+    "TwoBin.run_unsaturated_iff",
+    "TwoBin.run_eq_free_of_unsaturated",
+    "TwoBin.firstSaturationIndex_none_iff",
+    "TwoBin.firstSaturationIndex_bounds",
+    "TwoBin.truncatedFirstSaturation_le_length",
+    "TwoBin.sourceSurvivalCount_eq_free",
+    "TwoBin.sourceSurvivalCount_eq_no_saturation",
     "TwoBin.reversal_rv_count",
     "TwoBin.reversal_rk_count",
     "TwoBin.adjacent_rv_count",
     "TwoBin.adjacent_rk_count",
+    "TwoBin.activeTrials_flexes",
+    "TwoBin.forcedChoices_flexes",
+    "TwoBin.binomialWindow_zero_trials",
+    "TwoBin.survivalProbability_general",
+    "TwoBin.ranking_flexes_first",
+    "TwoBin.ranking_flexes_second",
+    "TwoBin.rv_flexes_survival",
+    "TwoBin.sourceSurvivalGap_flexes_positive",
+    "TwoBin.prefixGap_leading_flexibles",
+    "TwoBin.strictRVWitness_gap",
+    "TwoBin.strictRVWitness_positive",
+    "TwoBin.not_fixed_reverse_of_two_le",
+    "TwoBin.survivalProbability_one_of_short",
+    "TwoBin.sourceSurvivalGap_short",
+    "TwoBin.prefixGap_all_flexes",
+    "TwoBin.insertAt_singleton_flexes",
+    "TwoBin.matchingGap_singleton_position",
+    "TwoBin.arrivalOrders_one_sum",
+    "TwoBin.strictRV_random_gap",
+    "TwoBin.not_random_reverse_of_two_le",
+    "TwoBin.freeStep_total",
+    "TwoBin.runFree_total",
+    "TwoBin.activeTrials_single_le_positive",
+    "TwoBin.window_indicator",
+    "TwoBin.coinAverage_sum_range",
+    "TwoBin.free_interval_probability",
+    "TwoBin.unsaturated_free_interval",
+    "TwoBin.survivalProbability_average",
+    "TwoBin.survivalProbability_binomial",
+    "TwoBin.rv_survival_formula",
+    "TwoBin.ranking_survival_formula",
+    "TwoBin.source_survival_dominance",
+    "TwoBin.fallingRat_int",
+    "TwoBin.fallingRat_nat",
+    "TwoBin.midpointParts_identity",
+    "TwoBin.midpointParts_nonnegative",
+    "TwoBin.midpointParts_monotone",
+    "TwoBin.symmetric_secant_rat",
+    "TwoBin.symmetric_secant_int",
+    "TwoBin.runActual_valid",
+    "TwoBin.unsaturated_actual_total",
+    "TwoBin.zip_snoc",
+    "TwoBin.runActual_snoc",
+    "TwoBin.coinAverage_next_state",
+    "TwoBin.tailKernel_reward_decomposition",
+    "TwoBin.average_prefix_gain",
+    "TwoBin.rewardKernel_prefix_expansion",
+    "TwoBin.source_tail_expansion",
+    "TwoBin.prefixExpansion_dominance",
+    "TwoBin.fixed_sufficiency",
+    "TwoBin.capacityRegion_succ",
+    "TwoBin.capacityRegion_implies_fixed",
+    "TwoBin.hockey_range",
+    "TwoBin.choose_two_product",
+    "TwoBin.binomialZ_nat",
+    "TwoBin.weighted_hockey",
+    "TwoBin.weightedCoefficientSum_expansion",
+    "TwoBin.choose_raise_one",
+    "TwoBin.choose_raise_two",
+    "TwoBin.choose_raise_three",
+    "TwoBin.weighted_first_term",
+    "TwoBin.weighted_second_term",
+    "TwoBin.witnessBracket_formula",
+    "TwoBin.weightedCoefficientSum_closed",
+    "TwoBin.excluded_parity_gap",
+    "TwoBin.weightedCoefficientSum_negative",
+    "TwoBin.sum_matchingGap_counts",
+    "TwoBin.randomMatchingGap_nonnegative",
+    "TwoBin.sum_range_lt_const",
+    "TwoBin.sum_insertion_indicator",
+    "TwoBin.uniformWitness_gap",
+    "TwoBin.uniformWitness_gap_negative",
+    "TwoBin.random_implies_quadratic",
+    "TwoBin.full_classification",
+    "TwoBin.binomialZ_zero",
+    "TwoBin.survivalProbability_unit_mass",
+    "TwoBin.survivalProbability_zero_of_too_long",
+    "TwoBin.unit_survival_reverse",
+    "TwoBin.prefixExpansion_unit_reverse",
+    "TwoBin.fixed_reverse_unit",
+    "TwoBin.fixed_reverse_implies_random_reverse",
+    "TwoBin.matchingGap_nonpositive_of_reverse",
+    "TwoBin.randomMatchingGap_nonpositive_of_reverse",
+    "TwoBin.binomialZ_pascal",
+    "TwoBin.binomialZ_reflection",
+    "TwoBin.binomialWindow_sum",
+    "TwoBin.binomialWindow_shift",
+    "TwoBin.binomialWindow_pascal",
+    "TwoBin.binomialWindow_reflection",
+    "TwoBin.rankingSurvivalFormula_step",
+    "TwoBin.rankingSurvivalFormula_le_succ",
+    "TwoBin.rankingSurvivalFormula_monotone",
+    "TwoBin.pure_singleton_endpoint",
+    "TwoBin.survivalFormula_dominance",
     "TwoBin.witness_factorization",
     "TwoBin.witness_polynomial_negative",
     "TwoBin.witness_denominator_positive",
-    "TwoBin.random_witness_expression_negative"
+    "TwoBin.random_witness_expression_negative",
+    "TwoBin.two_flex_contribution",
+    "TwoBin.prefixGap_two_profile",
+    "TwoBin.witnessSum_range",
+    "TwoBin.matchingGap_two_profile",
+    "TwoBin.factorial_pred_rat",
+    "TwoBin.twoFlexCoefficient_boundary_factorial",
+    "TwoBin.fixedWitness_closed_formula",
+    "TwoBin.uniformWitness_closed_formula",
+    "TwoBin.activeTrials_append",
+    "TwoBin.forcedChoices_append",
+    "TwoBin.forcedChoices_nonnegative",
+    "TwoBin.activeTrials_positive",
+    "TwoBin.activeTrials_le_length",
+    "TwoBin.positiveWord_append",
+    "TwoBin.positiveWord_take",
+    "TwoBin.positiveWord_drop",
+    "TwoBin.insertEverywhere_eq_permutationsAux",
+    "TwoBin.arrivalOrders_eq_permutations",
+    "TwoBin.arrivalOrders_labeled",
+    "TwoBin.arrivalOrders_labeled_indices",
+    "TwoBin.labeled_arrival_orders_nodup",
+    "TwoBinChallenge.release_matches_literal_statement",
+    "TwoBinChallenge.release_matches_full_statement",
+    "TwoBinChallenge.regimes_match_literal_statement"
   ],
   "axioms": {
+    "TwoBin.continuationKernel_too_few": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationKernel_all_matched": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationGain_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationGain_flexible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationGain_all_matched": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_prefix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_nil": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_cons": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_counts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_nonnegative_of_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_negative": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.falling_nat_eq_descFactorial": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fallingRat_factorial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fallingRat_zero_of_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomial_factorial_bridge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.paired_binomial_shift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.forcedChoices_rv": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_rank1": [
+      "propext"
+    ],
+    "TwoBin.activeTrials_split": [
+      "propext"
+    ],
+    "TwoBin.freeStep_first": [
+      "propext"
+    ],
+    "TwoBin.runFree_first": [
+      "propext"
+    ],
+    "TwoBin.freeFirstMass_nil": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.freeFirstMass_cons": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialMass_pascal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_zero_trials": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.freeFirstMass_binomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationKernel_clamp": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationKernel_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_not_unsaturated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_total_unsaturated": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_total_flexible": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.singleton_totals_first_full": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.singleton_totals_second_full": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.saturated_continuation_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailKernel_saturated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.continuationGain_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "TwoBin.falling_zero": [],
     "TwoBin.falling_one": [
       "propext"
@@ -278,6 +1133,330 @@
       "Quot.sound",
       "propext"
     ],
+    "TwoBin.coinAverage_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_succ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_sub": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sum_indicator_eq_filter_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailKernel_source": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailKernel_rvCount": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailKernel_rkCount": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_mul_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_snoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.activeTrials_singletons": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_singletons": [
+      "propext"
+    ],
+    "TwoBin.prefixGap_leading_singletons": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_flexible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixedWitness_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixedWitness_gap_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_implies_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_strict_rv_of_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_strict_rv_of_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_strict_rk_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_strict_rk_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.four_regimes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.ranking_last_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalGap_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalGap_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.excluded_total_ge_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.twoFlexCoefficient_boundary_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertAt_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertEverywhere_range": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertAt_mem": [
+      "propext"
+    ],
+    "TwoBin.positiveWord_insertAt": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_cons_flex": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_insertAt_take": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.forcedChoices_take_le": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.forcedChoices_take_zero": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.forcedChoices_insertAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.twiceInserted_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.twiceInserted_positive": [
+      "propext"
+    ],
+    "TwoBin.twiceInserted_flexible_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.twiceInserted_prefix_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.list_sum_map_flatMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.list_sum_map_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertEverywhere_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_replicate": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_replicate_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_two_flexible_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.paired_interior": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.quadratic_implies_paired": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.paired_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.gap_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.gap_interior_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.interior_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.product_ratio_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.falling_add_le_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.paired_large_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_reverse_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_reverse_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.unit_region_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_equality_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_equality_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.no_universal_order_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.full_regime_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "TwoBin.oddSlope_monotone": [
       "Classical.choice",
       "Quot.sound",
@@ -288,10 +1467,567 @@
       "Quot.sound",
       "propext"
     ],
+    "TwoBin.coinWords_length": [
+      "propext"
+    ],
+    "TwoBin.coinWords_mem_length": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertEverywhere_length": [
+      "propext"
+    ],
+    "TwoBin.insertEverywhere_mem_length": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_mem_length": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.flatMap_length_constant": [
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_length": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixedDominance_implies_randomOrderDominance": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_loads_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.freeStep_loads_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_unsaturated_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.step_eq_free_of_unsaturated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.runActual_loads_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.runFree_loads_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.run_unsaturated_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.run_eq_free_of_unsaturated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.firstSaturationIndex_none_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.firstSaturationIndex_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.truncatedFirstSaturation_le_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalCount_eq_free": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalCount_eq_no_saturation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "TwoBin.reversal_rv_count": [],
     "TwoBin.reversal_rk_count": [],
     "TwoBin.adjacent_rv_count": [],
     "TwoBin.adjacent_rk_count": [],
+    "TwoBin.activeTrials_flexes": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_flexes": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialWindow_zero_trials": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_general": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.ranking_flexes_first": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.ranking_flexes_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rv_flexes_survival": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalGap_flexes_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_leading_flexibles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.strictRVWitness_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.strictRVWitness_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.not_fixed_reverse_of_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_one_of_short": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sourceSurvivalGap_short": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_all_flexes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.insertAt_singleton_flexes": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_singleton_position": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_one_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.strictRV_random_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.not_random_reverse_of_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.freeStep_total": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.runFree_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.activeTrials_single_le_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.window_indicator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_sum_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.free_interval_probability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.unsaturated_free_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_average": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_binomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rv_survival_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.ranking_survival_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.source_survival_dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fallingRat_int": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fallingRat_nat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.midpointParts_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.midpointParts_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.midpointParts_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.symmetric_secant_rat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.symmetric_secant_int": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.runActual_valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.unsaturated_actual_total": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.zip_snoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.runActual_snoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.coinAverage_next_state": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.tailKernel_reward_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.average_prefix_gain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rewardKernel_prefix_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.source_tail_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixExpansion_dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_sufficiency": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.capacityRegion_succ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.capacityRegion_implies_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.hockey_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.choose_two_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_nat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weighted_hockey": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weightedCoefficientSum_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.choose_raise_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.choose_raise_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.choose_raise_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weighted_first_term": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weighted_second_term": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.witnessBracket_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weightedCoefficientSum_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.excluded_parity_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.weightedCoefficientSum_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sum_matchingGap_counts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.randomMatchingGap_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sum_range_lt_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.sum_insertion_indicator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.uniformWitness_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.uniformWitness_gap_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.random_implies_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.full_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_unit_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalProbability_zero_of_too_long": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.unit_survival_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixExpansion_unit_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_reverse_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixed_reverse_implies_random_reverse": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_nonpositive_of_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.randomMatchingGap_nonpositive_of_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_pascal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialZ_reflection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialWindow_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialWindow_shift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialWindow_pascal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.binomialWindow_reflection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rankingSurvivalFormula_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rankingSurvivalFormula_le_succ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.rankingSurvivalFormula_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.pure_singleton_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.survivalFormula_dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "TwoBin.witness_factorization": [
       "Classical.choice",
       "Quot.sound",
@@ -311,12 +2047,126 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "TwoBin.two_flex_contribution": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.prefixGap_two_profile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.witnessSum_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.matchingGap_two_profile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.factorial_pred_rat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.twoFlexCoefficient_boundary_factorial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.fixedWitness_closed_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.uniformWitness_closed_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.activeTrials_append": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.forcedChoices_append": [
+      "propext"
+    ],
+    "TwoBin.forcedChoices_nonnegative": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.activeTrials_positive": [
+      "propext"
+    ],
+    "TwoBin.activeTrials_le_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.positiveWord_append": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.positiveWord_take": [],
+    "TwoBin.positiveWord_drop": [
+      "propext"
+    ],
+    "TwoBin.insertEverywhere_eq_permutationsAux": [
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_eq_permutations": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_labeled": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.arrivalOrders_labeled_indices": [
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBin.labeled_arrival_orders_nodup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBinChallenge.release_matches_literal_statement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBinChallenge.release_matches_full_statement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "TwoBinChallenge.regimes_match_literal_statement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "negative_controls": {
     "FalseNumeric": "REJECTED_AT_FALSE_CLAIM",
     "FalseQuadratic": "REJECTED_AT_FALSE_CLAIM",
-    "FalseRankingNumerator": "REJECTED_AT_FALSE_CLAIM"
+    "FalseRankingNumerator": "REJECTED_AT_FALSE_CLAIM",
+    "FalsePairedBound": "REJECTED_AT_FALSE_CLAIM",
+    "FalseFixedDominance": "REJECTED_AT_FALSE_CLAIM",
+    "FalseRandomDominance": "REJECTED_AT_FALSE_CLAIM",
+    "FalseEquality": "REJECTED_AT_FALSE_CLAIM"
   },
-  "status": "PARTIAL_LEMMAS_COMPILED_AND_AXIOMS_AUDITED"
+  "paired_classification": "TwoBin.paired_classification",
+  "binomial_corollary": "TwoBin.paired_binomial_shift",
+  "formula_comparison": "TwoBin.survivalFormula_dominance",
+  "full_probabilistic_bridges": "PROVED_FROM_ORIGINAL_SOURCE_COUNTS",
+  "four_regimes": "PROVED: TwoBin.four_regimes",
+  "fixed_witness_identity": "TwoBin.fixedWitness_closed_formula",
+  "uniform_witness_identity": "TwoBin.uniformWitness_closed_formula",
+  "literal_statement_challenge": "PASS; independently authored audit still not performed",
+  "status": "FULL_CLASSIFICATION_AND_REGIMES_COMPILED_AND_AXIOMS_AUDITED"
 }

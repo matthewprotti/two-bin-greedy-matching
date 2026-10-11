@@ -7,7 +7,7 @@ authors:
     given-names: Matthew
     affiliation: Independent Researcher
 version: 0.1.0
-abstract: "A sharp two-bin capacity classification, with a self-contained paper proof and exact reproducibility artifacts. A partial supporting Lean library compiles; the full classification is not formally proved."
+abstract: "A sharp two-bin capacity classification, with a self-contained paper proof and exact reproducibility artifacts. Lean checks the full matching classification and all four regimes for the original source model. Independent human statement correspondence review remains outstanding."
 keywords:
   - greedy matching
   - stochastic dominance

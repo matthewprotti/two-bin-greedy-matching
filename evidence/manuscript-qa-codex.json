@@ -3,10 +3,11 @@
   "mathematical_display_blocks": 45,
   "all_display_blocks_unchanged": true,
   "numbered_equations": 24,
-  "manuscript_changes": "Verification-status and AI-attribution prose only; no mathematical target or proof change",
-  "pdf_sha256": "e4096ef4d02543e94f3dbab5cb690df64cf997b527f4acaa24b2a21b9ab605a2",
+  "manuscript_changes": "Verification-status and AI-attribution prose updated for the full classification; PDF subject updated; all 45 mathematical displays unchanged",
+  "pdf_sha256": "25deef5ee88bd1691311d48057369579543c09d6839de7a2747acb7741b63ee7",
   "compiler": "Tectonic 0.16.9",
   "page_count": 10,
-  "layout_inspection": "Original pages inspected; rebuilt final status/references page inspected; no clipping or overlap",
-  "original_qa": "manuscript_qa.json records the received PDF, not this updated PDF"
+  "layout_inspection": "Original pages inspected previously; rebuilt final status/references page inspected with no clipping or overlap; final metadata-only rebuild has identical rendered page pixels",
+  "original_qa": "manuscript_qa.json records the received PDF, not this updated PDF",
+  "date": "2026-10-10"
 }
